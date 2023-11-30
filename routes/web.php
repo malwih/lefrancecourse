@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home', [
         "title" => "Home",
         "active" => "home"
@@ -25,4 +25,8 @@ Route::get('/courses', function () {
         "kelas" => "Kelas Dewasa",
         "active" => "courses"
     ]);
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
