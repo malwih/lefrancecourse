@@ -4,18 +4,19 @@
 
 @foreach ($courses as $course)
 <div class="grid grid-cols-1 md:grid-cols-3">
-        {{-- Kelas Dewasa --}}
-        <div class="p-8">
-            <div class="bg-indigo-100 rounded-full w-16 h-16 flex justify-center items-center text-indigo-500 shadow-2xl">
-                <img src="https://www.ifi-id.com/wp-content/uploads/2023/01/Dewasa-Icon.png" class="h-50 w-50" viewBox="0 0 20 20" fill="currentColor">
-            </div>
-            <h2 class="uppercase mt-6 text-indigo-500 font-medium mb-3"> {{ $course["title"] }} </h2>
-            <p class="font-light text-sm text-gray-500 mb-3"> {{ $course["body"] }} </p> <a class="text-indigo-500 flex items-center hover:text-indigo-600" href="/courses/{{ $course["slug"] }}"> Selengkapnya
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                </svg> </a>
+    {{-- Kelas Dewasa --}}
+    <div class="p-8">
+        <div class="bg-indigo-100 rounded-full w-16 h-16 flex justify-center items-center text-indigo-500 shadow-2xl">
+            <img src="https://www.ifi-id.com/wp-content/uploads/2023/01/Dewasa-Icon.png" class="h-50 w-50" viewBox="0 0 20 20" fill="currentColor">
         </div>
-        @endforeach
+        <h2 class="uppercase mt-6 text-indigo-500 font-medium mb-3"> {{ $course["title"] }} </h2>
+        <p class="font-light text-sm text-gray-500 mb-3"> {{ $course["body"] }} </p> <a class="text-indigo-500 flex items-center hover:text-indigo-600" href="/courses/{{ $course["slug"] }}"> Selengkapnya
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg> </a>
+    </div>
+</div>
+@endforeach
 
 <!-- <div class="p-8">
     <div class="flex felx-col items-center justify-center">
@@ -108,4 +109,4 @@
                 </svg> </a>
         </div>
     </div> -->
-    @endsection
+@endsection
