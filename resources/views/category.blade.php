@@ -3,6 +3,7 @@
 @section('container')
 
 @foreach ($courses as $course)
+<h1 class="mb-5">Course Category : {{ $category }}</h1>
 <div class="grid grid-cols-1 md:grid-cols-3">
     {{-- Kelas Dewasa --}}
     <div class="p-8">

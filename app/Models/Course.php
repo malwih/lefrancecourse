@@ -2,39 +2,55 @@
 
 namespace App\Models;
 
-class Course
-{
-    private static $blog_courses = [
-        [
-            "title" => "Kelas Dewasa",
-            "slug" => "kelas-dewasa",
-            "body" => "Kelas Dewasa ditujukan untuk publik mulai usia 15
-            tahun keatas. Anda akan mempelajari bahasa Prancis umum pada setiap aspeknya, lisan dan tulisan,
-            dengan menggunakan buku Tendances."
-        ],
-        [
-            "title" => "Kelas Remaja",
-            "slug" => "kelas-remaja",
-            "body" => "Kelas anak ditujukan untuk siswa yang duduk di sekolah
-            dasar (SD) sedangkan kelas remaja ditujukan untuk siswa yang duduk di sekolah menengah pertama
-            (SMP)."
-        ],
-        [
-            "title" => "Kelas Akselerasi",
-            "slug" => "kelas-akselerasi",
-            "body" => "Kelas ini dirancang khusus untuk Anda yang ingin
-            menyelesaikan pembelajaran dalam waktu singkat."
-        ]
-    ];
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\CssSelector\Node\FunctionNode;
+use Cviebrock\EloquentSluggable\Sluggable;
 
-    public static function all()
+class Course extends Model
+{
+    use HasFactory;
+
+    // protected $fillable = ['title', 'excerpt', 'body'];
+    protected $guarded = ['id'];
+    protected $with = ['category'];
+
+    public function scopeFilter($query, array $filters)
     {
-        return collect(self::$blog_courses);
+        $query->when($filters['search'] ?? false, function($query, $search) {
+            return $query->where('title', 'like', '%' . $search . '%')
+                        ->orWhere('body', 'like', '%' . $search . '%');
+        });
+
+        $query->when($filters['category'] ?? false, function($query, $category) {
+            return $query->whereHas('category', function($query) use ($category) {
+                $query->where('slug', $category);
+            });
+        });
+
+        $query->when($filters['author'] ?? false, fn($query, $author) => 
+            $query->whereHas('author', fn($query) =>
+                $query->where('username', $author)
+            )
+        );
     }
 
-    public static function find($slug)
+    public function category()
     {
-        $courses = static::all();
-        return $courses->firstWhere('slug', $slug);
+        return $this->belongsTo(Category::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

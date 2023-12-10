@@ -15,11 +15,11 @@ class CourseController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show(Course $course)
     {
         return view('course', [
             "title" => "Single Course",
-            "course" => Course::find($slug)
+            "course" => $course
         ]);
     }
 }

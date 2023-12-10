@@ -3,6 +3,7 @@
 use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,14 @@ Route::get('/', function () {
 });
 
 Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
-// Halaman single course
-Route::get('courses/{slug}', [CourseController::class, 'show']);
+Route::get('/categories', function() {
+    return view('categories', [
+        'title' => 'Course Categories',
+        'categories' => Category::all()
+    ]);
+});
 
 Route::get('/login', function () {
     return view('login');
