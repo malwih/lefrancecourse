@@ -16,14 +16,46 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "active" => "home"
     ]);
 });
 
 Route::get('/courses', function () {
+    $blog_courses = [
+        [
+            "title" => "Kelas Dewasa",
+            "slug" => "kelas-dewasa",
+            "body" => "Kelas Dewasa ditujukan untuk publik mulai usia 15
+            tahun keatas. Anda akan mempelajari bahasa Prancis umum pada setiap aspeknya, lisan dan tulisan,
+            dengan menggunakan buku Tendances."
+        ]
+    ];
     return view('courses', [
-        "kelas" => "Kelas Dewasa",
-        "active" => "courses"
+        "title" => "Courses",
+        "courses" => $blog_courses
+    ]);
+});
+
+// Halaman single course
+Route::get('courses/{slug}', function($slug) {
+    $blog_courses = [
+        [
+            "title" => "Kelas Dewasa",
+            "slug" => "kelas-dewasa",
+            "body" => "Kelas Dewasa ditujukan untuk publik mulai usia 15
+            tahun keatas. Anda akan mempelajari bahasa Prancis umum pada setiap aspeknya, lisan dan tulisan,
+            dengan menggunakan buku Tendances."
+        ]
+    ];
+
+    $new_course = [];
+    foreach($blog_courses as $course) {
+        if($course["slug"] === $slug) {
+            $new_course = $course;
+        }
+    }
+    return view('course', [
+        "title" => "Single Course",
+        "course" => $new_course
     ]);
 });
 
