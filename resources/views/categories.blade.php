@@ -2,36 +2,17 @@
 
 @section('container')
 
-<div class="bg-white py-2">
-    <div class="container mx-auto px-10">
-        <h2 class="text-3xl font-bold text-black mb-6">Introducing Our France Courses</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        @foreach ($courses as $course)
-            <div class="bg-gray-200 rounded-lg shadow-lg p-8">
-                <div class="relative overflow-hidden">
-                    @if($course->image)
-                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="{{ $course->category->name }}">
-                    <div class="absolute inset-0 bg-black opacity-40"></div>
-                    @else
-                    <a href="/courses?category={{ $course->category->slug  }}">
-                        <img class="rounded-t-lg" src="https://source.unsplash.com/500x400?{{ $course->category->name }}" alt="{{ $course->category->name }}" />
-                    </a>
-                    @endif
-                </div>
-                <h3 class="text-xl font-bold text-black mt-4">{{ $course->title }}</h3>
-                <p class="text-gray-500 text-sm mt-2">{{ $course->excerpt }}</p>
-                <div class="flex items-center justify-between mt-4">
-                    <a href="/courses/{{  $course->slug }}">
-                        <button class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button>
-                    </a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>
+@foreach ($categories as $category)
+<h1 class="mb-5">Course Categories</h1>
+        <ul>
+            <li>
+                <h2><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></h2>
+            </li>
+        </ul>
+    
+@endforeach
 
-    <!-- <div class="p-8">
+<!-- <div class="p-8">
     <div class="flex felx-col items-center justify-center">
         <h1 class="text-2xl font-medium text-gray-700 text-center mt-6"> Memilih kelas daring sesuai dengan usia dan
             kebutuhan komunikasi. </h1>
@@ -122,4 +103,4 @@
                 </svg> </a>
         </div>
     </div> -->
-    @endsection
+@endsection
