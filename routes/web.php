@@ -1,9 +1,15 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardCourseController;
 use App\Models\Course;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CourseController;
 use App\Models\Category;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +25,7 @@ use App\Models\Category;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
+        "active" => "home"
     ]);
 });
 
@@ -32,10 +39,21 @@ Route::get('/categories', function() {
     ]);
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/dashboard', function() {
+    return view('dashboard.index');
+})->middleware('auth');
+
+Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
+-> middleware('auth');
+
+Route::resource('/dashboard/courses', DashboardCourseController::class)
+->middleware('auth');
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');

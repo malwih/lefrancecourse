@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345')
         ]);
 
-        // User::factory(3)->create();
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Daring',
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'tatap-muka'
         ]);
 
-        Course::factory(20)->create();
+        Course::factory(6)->create();
 
     }
 }

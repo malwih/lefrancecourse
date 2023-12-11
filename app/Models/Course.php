@@ -9,9 +9,9 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 class Course extends Model
 {
-    use HasFactory;
+    use HasFactory, Sluggable;
 
-    // protected $fillable = ['title', 'excerpt', 'body'];
+    // protected $fillable = ['title','excerpt','body'];
     protected $guarded = ['id'];
     protected $with = ['category'];
 
@@ -34,10 +34,15 @@ class Course extends Model
             )
         );
     }
-
+    
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function getRouteKeyName()
