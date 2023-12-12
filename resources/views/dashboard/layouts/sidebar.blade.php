@@ -26,6 +26,7 @@
       <!-- <h6 class="sidebar-heading d-flex justify-conten-between align-items-center px-3 mt-4 mb-1 text-muted">
          <span>Administrator</span>
       </h6> -->
+      @can('admin')
       <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
          <li>
             <a href="/dashboard/categories" class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }} flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
@@ -36,7 +37,7 @@
             </a>
          </li>
       </ul>
-      
+      @endcan
    </div>
 </aside>
 </div>

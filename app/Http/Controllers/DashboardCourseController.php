@@ -121,7 +121,7 @@ class DashboardCourseController extends Controller
 
         Course::destroy($course->id);
 
-        return redirect('/dashboard/courses')->with('success', 'New course has been deleted!');
+        return redirect('/dashboard/courses')->with('success', 'Course has been deleted!');
     }
 
     public function checkSlug(Request $request)
