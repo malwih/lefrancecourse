@@ -10,7 +10,7 @@
             <div class="bg-gray-200 rounded-lg shadow-lg p-8">
                 <div class="relative overflow-hidden">
                     @if($course->image)
-                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="{{ $course->category->name }}">
+                    <img class="object-cover w-full h-full img-fluid" src="{{ asset('storage/' . $courses[0]->image) }}" alt="{{ $courses[0]->category->name }}">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
                     @else
                     <a href="/courses?category={{ $course->category->slug  }}">

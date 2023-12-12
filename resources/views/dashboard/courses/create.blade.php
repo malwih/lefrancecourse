@@ -9,7 +9,7 @@
   <h1 class="text-3xl font-bold text-black mb-6">Create New course</h1>
 </div>
 <div class="col-lg-8">
-  <form method="course" action="/dashboard/courses" class="mb-5" enctype="multipart/form-data">
+  <form method="post" action="/dashboard/courses" class="mb-5" enctype="multipart/form-data">
     @csrf
     <div class="max-w-sm mb-3">
       <label for="title" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Title</label>
