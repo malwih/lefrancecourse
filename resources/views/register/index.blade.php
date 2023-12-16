@@ -1,52 +1,126 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="flex min-h-full flex-col justify-center">
-    <div class="lg:px-8">
-        <main class="form-registration max-w-sm mx-auto -mt-7">
-            <h2 class="mt-8 mb-3 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Registration Form</h1>
-                <form action="/register" method="post">
-                    @csrf
-                    <div class="form-floating mb-3">
-                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Name" required value="{{ old('name') }}">
 
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-300 py-20">
+    <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-12 rounded-md w-full max-w-md">
+        <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Registration Your Account</div>
+        <button class="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
+            <span class="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500"><i class="fab fa-facebook-f"></i></span>
+            <span>Register with Facebook</span>
+        </button>
+        <div class="relative mt-10 h-px bg-gray-300">
+            <div class="absolute left-0 top-0 flex justify-center w-full -mt-2">
+                <span class="bg-white px-4 text-xs text-gray-500 uppercase">Or Register With Email</span>
+            </div>
+        </div>
+        <div class="mt-10">
+            <form action="/register" method="post">
+                @csrf
+                <!-- Nama -->
+                <div class="flex flex-col mb-6">
+                    <label for="name" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Name:</label>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <input id="name" type="name" name="name" class="form-control @error('name') is-invalid @enderror text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="John Doe" required />
                         @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
+                </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="text" id="username" name="username" class="form-control @error('username') is-invalid @enderror shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Username" required value="{{ old('username') }}">
+                <!-- Username -->
+                <div class="flex flex-col mb-6">
+                    <label for="username" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Username:</label>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                            </svg>
+                        </div>
+                        <input id="username" type="username" name="username" class="form-control @error('username') is-invalid @enderror text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="johndoe2023" required />
                         @error('username')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
+                </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email" required value="{{ old('email') }}">
+                <!-- Email -->
+                <div class="flex flex-col mb-6">
+                    <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+
+                        <input id="email" type="email" name="email" class="form-control @error('email') is-invalid @enderror text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="johndoe@gmail.com" required />
                         @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
+                </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Password" required>
+                <!-- Password -->
+                <div class="flex flex-col mb-6">
+                    <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Password:</label>
+                    <div class="relative">
+                        <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+
+                        <input id="password" type="password" name="password" class="form-control @error('password') is-invalid @enderror text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="John_Doe123" required />
                         @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
-                    <button class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" type="submit">Register</button>
-                </form>
-                <small class="d-block text-center px-3 mt-3">Already registered? <a href="/login" class="text-blue-600 hover:underline dark:text-blue-500">Login</a></small>
-        </main>
+                </div>
+
+                <div class="flex items-center mb-6 -mt-4">
+                    <div class="flex ml-auto">
+                        <!-- <a href="#" class="inline-flex text-xs sm:text-sm text-blue-500 hover:text-blue-700">Forgot Your Password?</a> -->
+                    </div>
+                </div>
+
+                <div class="flex w-full">
+                    <button type="submit" class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-orange-600 hover:bg-orange-700 rounded py-2 w-full transition duration-150 ease-in">
+                        <span class="mr-2 uppercase">Register</span>
+                        <span>
+                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Have an account -->
+        <div class="flex justify-center items-center mt-6">
+            <a href="/login" class="inline-flex items-center font-bold text-orange-500 hover:text-orange-700 text-xs text-center">
+                <span>
+                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                <span class="ml-2">You have an account?</span>
+            </a>
+        </div>
     </div>
 </div>
 

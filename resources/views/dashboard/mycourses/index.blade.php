@@ -7,7 +7,7 @@
   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
 
         <div class="realtive d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="text-3xl font-bold text-black mb-6">Post Courses</h1>
+            <h1 class="text-3xl font-bold text-black mb-6">My Courses</h1>
         </div>
 
 
