@@ -1,98 +1,187 @@
 @extends('layouts.main')
 
 @section('container')
-<!--
-  Heads up! 👋
 
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
-
-<section class="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat mb-20">
-  <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
-
-  <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
-    <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-      <h1 class="text-3xl font-extrabold sm:text-5xl">
-        Let us find your
-
-        <strong class="block font-extrabold text-blue-700"> Passion. </strong>
-      </h1>
-
-      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
+<!-- Hero -->
+<section class="p-20 dark:bg-gray-300 dark:text-gray-100">
+  <div class="container grid gap-2 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
+    <div class="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-white">
+      <span class="block mb-2 dark:text-gray-900">Le France Courses</span>
+      <h1 class="text-5xl font-extrabold dark:text-orange-500">Kursus Bahasa Perancis</h1>
+      <p class="my-8 dark:text-gray-800">
+        <span class="font-medium dark:text-gray-900">Meraih kemampuan berbahasa Perancis bukan hanya sekadar impian,</span> tetapi merupakan suatu komitmen untuk meningkatkan keterampilan komunikasi lintas budaya.
       </p>
-
-      <div class="mt-8 flex flex-wrap gap-4 text-center">
-        <a href="/courses" class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
-          Get Started
-        </a>
-      </div>
+      <form novalidate="" action="" class="self-stretch space-y-3">
+        <a href="/register"><button type="button" class="w-full py-2 font-semibold rounded dark:bg-orange-500 hover:bg-orange-400 dark:text-white">Join Our Courses</button></a>
+      </form>
     </div>
+    <img src="../storage/img/hero-home.jpg" alt="" class="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500">
   </div>
 </section>
 
-
-<!-- E-Commerce Card -->
-<div class="w-full mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-10">
-  <a href="#">
-    <img class="p-8 rounded-t-lg" src="https://st3.depositphotos.com/2133879/15771/v/1600/depositphotos_157715946-stock-illustration-learn-the-french-language.jpg" alt="product image" />
-  </a>
-  <div class="px-5 pb-5">
-    <a href="#">
-      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mari Belajar Bahasa Perancis</h5>
-    </a>
-    <div class="flex items-center mt-2.5 mb-5">
-      <div class="flex items-center space-x-1 rtl:space-x-reverse">
-        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-        </svg>
-        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-        </svg>
-        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-        </svg>
-        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-        </svg>
-        <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-        </svg>
-      </div>
-      <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
+<!-- Mengapa Le France Courses? -->
+<div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5 mb-10">
+    <h2 class="mb-12 mt-3 text-3xl font-extrabold leading-tight text-gray-900">Mengapa Le France Courses?</h2>
+    <div class="w-full">
+        <div class="flex flex-col w-full mb-10 sm:flex-row">
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Instruktur Berkualitas Tinggi</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">------------</p>
+                        <p class="mb-2 text-gray-600">"Le France Courses" memiliki tim pengajar yang sangat berkualitas dan berkomitmen untuk memberikan pengalaman pembelajaran yang terbaik. Instruktur kami adalah penutur asli bahasa Perancis atau ahli yang memiliki keahlian mendalam dalam pengajaran bahasa. Dengan demikian, peserta kursus dapat belajar dari para profesional yang berpengalaman.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Metode Pengajaran Interaktif</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">------------</p>
+                        <p class="mb-2 text-gray-600">Kursus bahasa Perancis di "Le France Courses" dirancang dengan pendekatan interaktif untuk memastikan peserta terlibat aktif dalam pembelajaran. Melalui percakapan, permainan peran, dan aktivitas interaktif lainnya, peserta dapat meningkatkan keterampilan berbicara mereka dengan lebih percaya diri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col w-full mb-5 sm:flex-row">
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Fokus pada Keterampilan Praktis</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">------------</p>
+                        <p class="mb-2 text-gray-600">"Le France Courses" menempatkan vokus pada pengembangan keterampilan praktis dalam bahasa Perancis. Kami memberikan latihan-latihan yang relevan dengan kehidupan sehari-hari, seperti situasi percakapan di restoran, perjalanan, atau saat berbelanja. Hal ini membantu peserta untuk langsung mengaplikasikan pengetahuan mereka dalam konteks kehidupan nyata.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Fleksibilitas Jadwal</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase">------------</p>
+                        <p class="mb-2 text-gray-600">Kami memahami bahwa kehidupan sehari-hari sering kali sibuk, oleh karena itu, "Le France Courses" menawarkan fleksibilitas jadwal. Dengan opsi kelas pagi, siang, atau malam, peserta dapat memilih waktu yang paling sesuai dengan jadwal mereka, memungkinkan mereka untuk tetap fokus pada pembelajaran bahasa Perancis tanpa mengorbankan kewajiban lainnya.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Materi Pembelajaran yang Terstruktur</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
+                        <p class="mb-2 text-gray-600">Kursus bahasa Perancis di "Le France Courses" disusun secara sistematis untuk memastikan perkembangan yang konsisten. Mulai dari tingkat pemula hingga tingkat lanjutan, peserta akan dibimbing melalui materi pembelajaran yang terstruktur, memungkinkan mereka untuk membangun dasar yang kokoh dan kemudian memperluas kemampuan bahasa Perancis mereka.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="flex items-center justify-between">
-      <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-      <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+</div>
+<!-- source:https://tailwind.besoeasy.com -->
+
+
+
+<!-- Harga Kursus -->
+<div class="min-h-screen bg-gradient-to-tr from-red-300 to-yellow-200 flex justify-center items-center py-20">
+  <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
+    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+      <div class="relative">
+        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
+        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp2,000,000</p>
+      </div>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Beginners</h1>
+      <div class="my-4">
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
+          <p>3 Bulan</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <p>Usia 10-14 Tahun</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+        </div>
+        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
+      </div>
+    </div>
+    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+      <div class="relative">
+        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
+        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp2,500,000</p>
+        <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">10% Discount</p>
+      </div>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Intermediate</h1>
+      <div class="my-4">
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
+          <p>3 Bulan</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <p>Usia 15-17 Tahun</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+        </div>
+        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
+      </div>
+    </div>
+    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+      <div class="relative">
+        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1561835491-ed2567d96913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
+        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp3,000,000</p>
+      </div>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Advanced</h1>
+      <div class="my-4">
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
+          <p>3 Bulan</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <p>Usia 17 Tahun Keatas</p>
+        </div>
+        <div class="flex space-x-1 items-center">
+        </div>
+        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
+      </div>
     </div>
   </div>
 </div>
 
-
-<!-- Call Action Card -->
-<div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-  <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
-  <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.</p>
-  <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-      <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-        <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path>
-      </svg>
-      <div class="text-left rtl:text-right">
-        <div class="mb-1 text-xs">Download on the</div>
-        <div class="-mt-1 font-sans text-sm font-semibold">Mac App Store</div>
-      </div>
-    </a>
-    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-      <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path>
-      </svg>
-      <div class="text-left rtl:text-right">
-        <div class="mb-1 text-xs">Get in on</div>
-        <div class="-mt-1 font-sans text-sm font-semibold">Google Play</div>
-      </div>
-    </a>
-  </div>
-</div>
 @endsection
