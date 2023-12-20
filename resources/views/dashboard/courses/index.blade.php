@@ -7,11 +7,11 @@
   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
 
         <div class="realtive d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="text-3xl font-bold text-black mb-6">Post Courses</h1>
+            <h1 class="text-3xl font-bold text-black mb-6">Courses</h1>
         </div>
 
 
-        <a href="/dashboard/courses/create" class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create New Course</a>
+        <a href="/dashboard/courses/create" class="text-white bg-orange-500 hover:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create New Course</a>
         
         @if(session()->has('success'))
       <div class="flex items-center p-4 mt-8 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-900 dark:text-green-400 dark:border-green-800" role="alert">

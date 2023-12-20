@@ -5,7 +5,7 @@
     <nav class="header-links contents font-semibold text-base lg:text-lg">
         <ul class="flex items-center ml-4 xl:ml-8 mr-auto">
             <a href="/">
-                <li class="p-3 xl:p-6 hover:bg-gray-300 text-orange-500 {{ ($title === "Home") ? 'active' : '' }}">
+                <li class="p-3 xl:p-6 hover:bg-gray-300 text-orange-500">
                     <span>Home</span>
                 </li>
             </a>

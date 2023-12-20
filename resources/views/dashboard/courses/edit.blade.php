@@ -48,9 +48,9 @@
                     <label for="image" class="form-label block text-large font-medium text-gray-900 dark:text-black">Course Image</label>
                     <input type="hidden" name="oldImage" value="{{ $course->image }}">
                     @if($course->image)
-                    <img src="{{ asset('storage/' . $course->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                    <img src="{{ asset('storage/' . $course->image) }}" class="w-1/2 h-1/2 img-preview img-fluid mb-3 mt-3 col-sm-5 d-block">
                     @else
-                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                    <img class="w-1/2 h-1/2 img-preview img-fluid mb-3 mt-3 col-sm-5">
                     @endif
 
                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
@@ -78,7 +78,7 @@
                 </div>
 
 
-                <button type="submit" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Course</button>
+                <button type="submit" class="text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Course</button>
             </form>
         </div>
     </div>

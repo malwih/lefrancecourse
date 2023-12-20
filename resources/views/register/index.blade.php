@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div class="min-h-screen flex flex-col items-center justify-center bg-gray-300 py-20">
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-16">
     <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-12 rounded-md w-full max-w-md">
         <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Registration Your Account</div>
         <button class="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
