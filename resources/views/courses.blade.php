@@ -2,27 +2,28 @@
 
 @section('container')
 
-<div class="bg-white py-2">
+<div class="bg-gray-100 py-2">
     <div class="container mx-auto px-10">
-        <h2 class="text-3xl font-bold text-black mb-6">Introducing Our France Courses</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 class="flex justify-center text-3xl font-bold text-orange-500 mb-6 py-8">Introducing Our France Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         @foreach ($courses as $course)
-            <div class="bg-gray-200 rounded-lg shadow-lg p-8">
+            <div class="shadow-lg rounded-lg">
                 <div class="relative overflow-hidden">
                     @if($course->image)
-                    <img class="object-cover w-full h-full img-fluid" src="{{ asset('storage/' . $courses[0]->image) }}" alt="{{ $courses[0]->category->name }}">
-                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <a href="/courses/{{  $course->slug }}">
+                    <img class="object-cover rounded-t-lg w-full h-full img-fluid" src="{{ asset('storage/' . $courses[0]->image) }}" alt="{{ $courses[0]->category->name }}">
+                    </a>
                     @else
-                    <a href="/courses?category={{ $course->category->slug  }}">
-                        <img class="rounded-t-lg" src="https://source.unsplash.com/500x400?{{ $course->category->name }}" alt="{{ $course->category->name }}" />
+                    <a href="/courses/{{  $course->slug }}">
+                        <img class="object-cover w-full h-full rounded-t-lg" src="https://source.unsplash.com/500x400?{{ $course->category->name }}" alt="{{ $course->category->name }}" />
                     </a>
                     @endif
                 </div>
-                <h3 class="text-xl font-bold text-black mt-4">{{ $course->title }}</h3>
-                <p class="text-gray-500 text-sm mt-2">{{ $course->excerpt }}</p>
-                <div class="flex items-center justify-between mt-4">
+                <h3 class="text-xl font-bold text-black mt-4 px-8">{{ $course->title }}</h3>
+                <p class="text-gray-500 text-sm px-8 py-2 overflow-hidden">{{ $course->excerpt }}</p>
+                <div class="flex items-center justify-between mt-4 px-8">
                     <a href="/courses/{{  $course->slug }}">
-                        <button class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button>
+                        <button class="text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-8">Read More</button>
                     </a>
                 </div>
             </div>

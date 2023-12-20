@@ -4,8 +4,8 @@
 @section('container')
 
 
-<div class="min-h-screen flex flex-col items-center justify-center bg-gray-300">
-  <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-12 rounded-md w-full max-w-md">
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+  <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
 
   @if(session()->has('success'))
     <div class="flex items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-900 dark:text-green-400 dark:border-green-800" role="alert">

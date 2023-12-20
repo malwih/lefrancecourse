@@ -47,7 +47,7 @@ class DashboardCourseController extends Controller
         }
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
         
         Course::create($validatedData);
 

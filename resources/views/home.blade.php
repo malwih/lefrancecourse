@@ -3,7 +3,7 @@
 @section('container')
 
 <!-- Hero -->
-<section class="p-20 dark:bg-gray-300 dark:text-gray-100">
+<section class="p-20 dark:bg-gray-100 dark:text-gray-100">
   <div class="container grid gap-2 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
     <div class="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-white">
       <span class="block mb-2 dark:text-gray-900">Le France Courses</span>
@@ -21,7 +21,7 @@
 
 <!-- Mengapa Le France Courses? -->
 <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5 mb-10">
-    <h2 class="mb-12 mt-3 text-3xl font-extrabold leading-tight text-gray-900">Mengapa Le France Courses?</h2>
+    <h2 class="flex justify-center mb-12 mt-3 text-3xl font-extrabold leading-tight text-orange-500">Mengapa Le France Courses?</h2>
     <div class="w-full">
         <div class="flex flex-col w-full mb-10 sm:flex-row">
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
@@ -182,6 +182,91 @@
       </div>
     </div>
   </div>
+</div>
+
+<h2 class="flex justify-center mb-5 mt-10 text-3xl font-extrabold leading-tight text-orange-500">Professional Coach</h2>
+<div class="flex justify-center w-full p-4">
+  <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
+    <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://media.gq.com/photos/56bbb862b89407780bd7d78d/master/pass/bieber-square.jpg" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          “Dalam perjalanan karier saya, saya telah merancang program pembelajaran yang menarik dan efektif untuk meningkatkan kemampuan berbicara, menulis, mendengarkan, dan membaca siswa dalam Bahasa Perancis.”
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-orange-500 dark:text-orange-400">
+          Fowaz Amran Alvarez
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Advanced Coach, Bandung
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="flex justify-center w-full p-4">
+  <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
+    <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://pyxis.nymag.com/v1/imgs/82f/f08/28fc7928bc8feb5d634d15d4143e096d32-jimin.1x.rsquare.w1400.jpg" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          “Saya aktif menggunakan pendekatan interaktif yang melibatkan siswa secara langsung dalam pembelajaran. Saya sering mengorganisir kegiatan kelompok, simulasi situasi nyata, dan diskusi yang merangsang pemikiran kreatif serta meningkatkan keterampilan komunikasi dalam Bahasa Perancis.”
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-orange-500 dark:text-orange-400">
+          Malwi Hidayat Togatorop
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Advanced Coach, Bekasi
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="flex justify-center w-full p-4">
+  <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
+    <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://people.com/thmb/HASnCxTPTFT41QW422Rkr1HZWQ0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(719x349:721x351)/zayn-malik-grammys-032423-7ed19864859f40caa61ec08458090a14.jpg" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          “Saya menyadari pentingnya menciptakan lingkungan pembelajaran yang inklusif dan positif. Saya mendorong partisipasi aktif, memberikan umpan balik konstruktif, dan membangun hubungan yang mendukung antara saya dan siswa.”
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-orange-500 dark:text-orange-400">
+          Ahmad Raihan
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Intermediate Coach, Yogyakarta
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="flex justify-center w-full p-4">
+  <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
+    <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://live.staticflickr.com/3635/3368670743_0d61bb91c7_b.jpg" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          “Saya mendorong siswa untuk memahami dan menghargai perbedaan budaya, serta memotivasi mereka untuk berkomunikasi dengan keberanian dalam bahasa Perancis.”
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-orange-500 dark:text-orange-400">
+          Moch Derral Pramudya
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Beginner Coach, Malang
+        </div>
+      </figcaption>
+    </div>
+  </figure>
 </div>
 
 @endsection
