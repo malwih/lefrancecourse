@@ -30,7 +30,7 @@
 
     {{-- Login Button With Google --}}
     <!-- Menambahkan fungsi log in google -->
-    <div class='flex items-center justify-center'>
+    <div class='flex items-center justify-center '>
       <a href="{{ route('google.redirect') }}">
         <button class="relative flex items-center justify-center mt-6 bg-white dark:bg-white border border-gray-300 rounded-lg shadow-md py-2 text-sm font-medium text-gray-800 dark:text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-0 focus:ring-gray-500">
           <svg class="flex items-center justify-center h-4 w-4 mr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="-0.5 0 48 48" version="1.1">

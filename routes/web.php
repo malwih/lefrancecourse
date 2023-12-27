@@ -63,9 +63,12 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 
 // Log in google
 Route::get('/auth/redirect', [SocialController::class, 'redirect'])->name('google.redirect');
+// Redirect ke Dashboard
+Route::get('/google/redirect', [SocialController::class, 'googleCallback'])->name('google.callback');
 
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('github')->user();
+
+// Route::get('/auth/callback', function () {
+//     $user = Socialite::driver('github')->user();
 
     // $user->token
-});
+// });
