@@ -10,6 +10,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\SocialController;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +34,7 @@ Route::get('/', function () {
 Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Course Categories',
         'categories' => Category::all()
@@ -46,15 +48,24 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function() {
+Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
 
-Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
--> middleware('auth');
+Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])
+    ->middleware('auth');
 
 
 Route::resource('/dashboard/courses', DashboardCourseController::class)
-->middleware('auth');
+    ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+// Log in google
+Route::get('/auth/redirect', [SocialController::class, 'redirect'])->name('google.redirect');
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('github')->user();
+
+    // $user->token
+});
