@@ -43,9 +43,8 @@
             </ul>
         </div>
         @else
-        <a href="/login"><button type="button" class="flex bg-black hover:bg-orange-400 text-xs text-white font-bold px-4 xl:px-6 py-2 xl:py-3 rounded {{ ($active === "login") ? 'active' : '' }}">
-                Login
-            </button></a>
+        <a href="/login"><button type="button" class="flex items-center justify-center self-center bg-black hover:bg-orange-400 text-xs text-white font-bold px-4 xl:px-6 py-2 xl:py-3 rounded {{ ($active === "login") ? 'active' : '' }}">
+            <img class="h-3.5 w-3.5 mr-1.5 flex items-center self-center" src="../storage/icon/icon-login.png" alt="">Login</button></a>
         @endauth
 
         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
