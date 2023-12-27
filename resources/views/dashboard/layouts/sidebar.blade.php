@@ -6,7 +6,7 @@
                 <img class="w-12 h-12 rounded-full" src="https://play-lh.googleusercontent.com/O8mvDQlw4AwmGfUrh4lviZD_PwwhRHz2etA25F77SbXrm3qEHOt2826aNkKar4D0yw" alt="{{ auth()->user()->name }}">
             </div>
             <ul class="space-y-2 text-sm font-medium">
-            <span>Student</span>
+                <span>Student</span>
                 <li>
                     <a href="/dashboard" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 focus:shadow-outline">
                         <span class="text-gray-600">
@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/myprofile" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
+                    <a href="/dashboard/myprofile" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
                         <span class="text-gray-600">
                             <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
