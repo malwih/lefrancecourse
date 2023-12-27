@@ -21,7 +21,7 @@
 
 <!-- Mengapa Le France Courses? -->
 <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5 mb-10">
-    <h2 class="flex justify-center mb-12 mt-3 text-3xl font-extrabold leading-tight text-orange-500">Mengapa Le France Courses?</h2>
+    <h2 class="flex justify-center mb-12 mt-3 text-3xl font-extrabold leading-tight text-orange-500">Why Le France Courses?</h2>
     <div class="w-full">
         <div class="flex flex-col w-full mb-10 sm:flex-row">
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
@@ -91,100 +91,7 @@
 </div>
 <!-- source:https://tailwind.besoeasy.com -->
 
-
-
-<!-- Harga Kursus -->
-<div class="min-h-screen bg-gradient-to-tr from-red-300 to-yellow-200 flex justify-center items-center py-20">
-  <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
-    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
-      <div class="relative">
-        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp2,000,000</p>
-      </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Beginners</h1>
-      <div class="my-4">
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </span>
-          <p>3 Bulan</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </span>
-          <p>Usia 10-14 Tahun</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-        </div>
-        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
-      </div>
-    </div>
-    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
-      <div class="relative">
-        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp2,500,000</p>
-        <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">10% Discount</p>
-      </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Intermediate</h1>
-      <div class="my-4">
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </span>
-          <p>3 Bulan</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </span>
-          <p>Usia 15-17 Tahun</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-        </div>
-        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
-      </div>
-    </div>
-    <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
-      <div class="relative">
-        <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1561835491-ed2567d96913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Rp3,000,000</p>
-      </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Advanced</h1>
-      <div class="my-4">
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </span>
-          <p>3 Bulan</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </span>
-          <p>Usia 17 Tahun Keatas</p>
-        </div>
-        <div class="flex space-x-1 items-center">
-        </div>
-        <button class="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">Daftar Sekarang</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<h2 class="flex justify-center mb-5 mt-10 text-3xl font-extrabold leading-tight text-orange-500">Professional Coach</h2>
+<h2 class="flex justify-center mb-5 mt-10 text-3xl font-extrabold leading-tight text-orange-500">Les Professeur</h2>
 <div class="flex justify-center w-full p-4">
   <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
     <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://media.gq.com/photos/56bbb862b89407780bd7d78d/master/pass/bieber-square.jpg" alt="" width="384" height="512">
@@ -196,10 +103,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Fowaz Amran Alvarez
+          Monsieur Fowaz Amran Alvarez
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Advanced Coach, Bandung
+          Advanced Professeur, Bandung
         </div>
       </figcaption>
     </div>
@@ -217,10 +124,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Malwi Hidayat Togatorop
+         Monsieur Malwi Hidayat Togatorop
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Advanced Coach, Bekasi
+          Advanced Professeur, Bekasi
         </div>
       </figcaption>
     </div>
@@ -238,10 +145,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Ahmad Raihan
+          Monsieur Ahmad Raihan
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Intermediate Coach, Yogyakarta
+          Intermediate Professeur, Yogyakarta
         </div>
       </figcaption>
     </div>
@@ -259,10 +166,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Moch Derral Pramudya
+          Monsieur Moch Derral Pramudya
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Beginner Coach, Malang
+          Beginner Professeur, Malang
         </div>
       </figcaption>
     </div>

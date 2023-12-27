@@ -10,8 +10,12 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
+<<<<<<< HEAD
 use App\Http\Controllers\SocialController;
 use Laravel\Socialite\Facades\Socialite;
+=======
+use App\Http\Controllers\GoogleController;
+>>>>>>> 45a6b8a47c50da63b13b08366d47f483256331a6
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +65,7 @@ Route::resource('/dashboard/courses', DashboardCourseController::class)
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
+<<<<<<< HEAD
 // Log in google
 Route::get('/auth/redirect', [SocialController::class, 'redirect'])->name('google.redirect');
 // Redirect ke Dashboard
@@ -72,3 +77,7 @@ Route::get('/google/redirect', [SocialController::class, 'googleCallback'])->nam
 
     // $user->token
 // });
+=======
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+>>>>>>> 45a6b8a47c50da63b13b08366d47f483256331a6

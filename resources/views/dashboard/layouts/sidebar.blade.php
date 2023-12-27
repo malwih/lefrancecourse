@@ -2,15 +2,13 @@
     <!-- component -->
     <div class="flex flex-wrap bg-gray-100 w-full h-screen">
         <div class="w-full bg-white rounded p-12 pt-20 shadow-lg">
-            <div class="flex items-center space-x-4 p-2 mb-5">
+            <div class="flex justify-center items-center space-x-4 p-2 mb-2">
                 <img class="w-12 h-12 rounded-full" src="https://play-lh.googleusercontent.com/O8mvDQlw4AwmGfUrh4lviZD_PwwhRHz2etA25F77SbXrm3qEHOt2826aNkKar4D0yw" alt="{{ auth()->user()->name }}">
-                <div>
-                    <h4 class="font-semibold text-lg text-gray-700 capitalize font-poppins tracking-wide">{{ auth()->user()->name }}</h4>
-                </div>
             </div>
-            <ul class="space-y-2 text-sm">
+            <ul class="space-y-2 text-sm font-medium">
+            <span>Student</span>
                 <li>
-                    <a href="/dashboard" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 bg-gray-200 focus:shadow-outline">
+                    <a href="/dashboard" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 focus:shadow-outline">
                         <span class="text-gray-600">
                             <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -27,16 +25,6 @@
                             </svg>
                         </span>
                         <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/mycourses" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
-                        <span class="text-gray-600">
-                            <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-                            </svg>
-                        </span>
-                        <span>My Courses</span>
                     </a>
                 </li>
             </ul>
