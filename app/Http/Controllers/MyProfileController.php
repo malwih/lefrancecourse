@@ -25,7 +25,7 @@ class MyProfileController extends Controller
         ]);
 
         // Perbarui informasi profil
-        $user->update($validatedData);
+        // $user->update($validatedData);
 
         return redirect()->back()->with('success', 'Profil berhasil diperbarui!');
     }
