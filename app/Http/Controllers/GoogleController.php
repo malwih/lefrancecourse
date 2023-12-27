@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 class GoogleController extends Controller
@@ -21,9 +22,9 @@ class GoogleController extends Controller
         try {
             $user = Socialite::driver('google')->stateless()->user();
 
-            $findUser = User::where('id_google', $user->id)->first();
-            
-            if($findUser){
+            $findUser = User::where('email', $user->email)->first();
+
+            if ($findUser) {
 
                 Auth::login($findUser);
 
@@ -31,7 +32,7 @@ class GoogleController extends Controller
             } else {
                 $newUser = User::create([
                     'name' => $user->name,
-                    'username' => $user->name,
+                    'username' => $user->name . '_' . Str::random(5),
                     'email' => $user->email,
                     'password' => Hash::make('12345'),
                     'id_google' => $user->id,
