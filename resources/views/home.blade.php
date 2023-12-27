@@ -21,7 +21,7 @@
 
 <!-- Mengapa Le France Courses? -->
 <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5 mb-10">
-    <h2 class="flex justify-center mb-12 mt-3 text-3xl font-extrabold leading-tight text-orange-500">Mengapa Le France Courses?</h2>
+    <h2 class="flex justify-center mb-12 mt-3 text-3xl font-extrabold leading-tight text-orange-500">Why Le France Courses?</h2>
     <div class="w-full">
         <div class="flex flex-col w-full mb-10 sm:flex-row">
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
@@ -184,7 +184,7 @@
   </div>
 </div>
 
-<h2 class="flex justify-center mb-5 mt-10 text-3xl font-extrabold leading-tight text-orange-500">Professional Coach</h2>
+<h2 class="flex justify-center mb-5 mt-10 text-3xl font-extrabold leading-tight text-orange-500">Les Professeur</h2>
 <div class="flex justify-center w-full p-4">
   <figure class="md:flex max-w-5xl bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-gray-200 shadow-lg">
     <img class="w-24 h-24 md:w-48 md:h-auto mx-auto object-cover" src="https://media.gq.com/photos/56bbb862b89407780bd7d78d/master/pass/bieber-square.jpg" alt="" width="384" height="512">
@@ -196,10 +196,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Fowaz Amran Alvarez
+          Monsieur Fowaz Amran Alvarez
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Advanced Coach, Bandung
+          Advanced Professeur, Bandung
         </div>
       </figcaption>
     </div>
@@ -217,10 +217,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Malwi Hidayat Togatorop
+         Monsieur Malwi Hidayat Togatorop
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Advanced Coach, Bekasi
+          Advanced Professeur, Bekasi
         </div>
       </figcaption>
     </div>
@@ -238,10 +238,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Ahmad Raihan
+          Monsieur Ahmad Raihan
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Intermediate Coach, Yogyakarta
+          Intermediate Professeur, Yogyakarta
         </div>
       </figcaption>
     </div>
@@ -259,10 +259,10 @@
       </blockquote>
       <figcaption class="font-medium">
         <div class="text-orange-500 dark:text-orange-400">
-          Moch Derral Pramudya
+          Monsieur Moch Derral Pramudya
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-          Beginner Coach, Malang
+          Beginner Professeur, Malang
         </div>
       </figcaption>
     </div>
