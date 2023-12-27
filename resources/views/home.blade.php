@@ -11,7 +11,7 @@
                 <input class="es_required_field es_txt_email ig es_form_field_email mt-1 p-1 border rounded-md" type="email"
                     name="EMAIL" placeholder="Your email address" style="padding: 4px" fdprocessedid="7ivk73">
                 <span class="es_spinner image spinnercusti" style="display: none" id="spinner-image"></span>
-                <input type="submit" value="Subscribe" class="px-2 py-1 bg-blue-500 text-white rounded-md text-xs"
+                <input type="submit" value="Send" class="px-2 py-1 bg-blue-500 text-white rounded-md text-xs"
                     id="es_subscription_form_submit_1" fdprocessedid="tqruts">
             </div>
         </div>
