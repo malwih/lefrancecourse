@@ -33,7 +33,7 @@ Route::get('/', function () {
 Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Course Categories',
         'categories' => Category::all()
@@ -47,16 +47,21 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function() {
+Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
 
-Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
--> middleware('auth');
+Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])
+    ->middleware('auth');
 
+//Menambah Router myprofile
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/myprofile', [MyProfileController::class, 'edit'])->name('myprofile.edit');
+    Route::put('/dashboard/myprofile', [MyProfileController::class, 'update'])->name('myprofile.update');
+});
 
 Route::resource('/dashboard/courses', DashboardCourseController::class)
-->middleware('auth');
+    ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
