@@ -35,6 +35,11 @@
             <ul class="space-y-2 text-sm pt-4 mt-4 font-medium border-t border-gray-200 dark:border-gray-700">
                 <span>Administrator</span>
                 <li>
+                    <a href="/dashboard/news" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
+                        <span>News</span>
+                    </a>
+                </li>
+                <li>
                     <a href="/dashboard/courses" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
                         <span class="text-gray-600">
                             <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,6 +57,16 @@
                             </svg>
                         </span>
                         <span>Category</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/schedule" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
+                        <span>Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/testimoni" class="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:hover:bg-orange-500 focus:bg-gray-200 focus:shadow-outline">
+                        <span>Testimoni</span>
                     </a>
                 </li>
             </ul>

@@ -65,5 +65,7 @@ Route::resource('/dashboard/courses', DashboardCourseController::class)
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
+Route::resource('/dashboard/news', AdminCategoryController::class)->except('show')->middleware('admin');
+
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

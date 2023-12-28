@@ -50,7 +50,7 @@
                         <form action="/logout" method="post">
                             @csrf
                             <button type="submit"
-                                class="flex justify-left w-full dropdown-item px-4 py-2 hover:bg-gray-100 dark:hover:bg-orange-400 dark:hover:text-white">Logout</button></a>
+                                class="flex justify-left w-full dropdown-item px-4 py-2 hover:bg-gray-100 dark:hover:bg-orange-400 dark:hover:text-white"><img class="w-4 h-4 flex items-center self-center mr-1.5" src="../storage/icon/icon-logout.png" alt="">Logout</button></a>
                         </form>
                     </li>
                 </ul>
