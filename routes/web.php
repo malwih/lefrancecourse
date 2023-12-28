@@ -54,10 +54,21 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])
     ->middleware('auth');
 
-//Menambah Router myprofile
+// Modifikasi tampilan dashboard
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard/myprofile', [MyProfileController::class, 'edit'])->name('myprofile.edit');
-    Route::put('/dashboard/myprofile', [MyProfileController::class, 'update'])->name('myprofile.update');
+    // Dashboard
+    Route::get('/dashboard', [DashboardCourseController::class, 'index'])->name('dashboard');
+    // Courses
+    Route::get('/course/{id}/take', [CourseController::class, 'take'])->name('course.take');
+    Route::get('/course/{id}/complete', [CourseController::class, 'complete'])->name('course.complete');
+});
+
+//Menambah Route myprofile
+// Route Edit Profile
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/editprofile', [MyProfileController::class, 'edit'])->name('editprofile.edit');
+    Route::put('/dashboard/editprofile', [MyProfileController::class, 'update'])->name('editprofile.update');
+    Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
 });
 
 Route::resource('/dashboard/courses', DashboardCourseController::class)
