@@ -217,6 +217,64 @@
         </figure>
     </div>
 
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <title>Accordion FAQ - Halaman Utama</title>
+    </head>
+
+    <body class="bg-gray-100 font-sans">
+
+        <div class="container mx-auto p-8">
+            <h1 class="text-3xl font-bold mb-6">F.A.Q</h1>
+
+            <!-- FAQ Item 1 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq1')">
+                    <h2 class="text-xl font-semibold">Apa itu Le France Courses?</h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq1" class="hidden mt-2">Le France Courses adalah sebuah platform pendidikan daring yang
+                    menyediakan berbagai kursus berkualitas tinggi dalam berbagai bahasa, terutama bahasa Prancis. Dirancang
+                    untuk memenuhi kebutuhan pelajar dari berbagai tingkat kemampuan, Le France Courses menawarkan
+                    kursus-kursus yang dikembangkan oleh para ahli dalam bidangnya.</p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq2')">
+                    <h2 class="text-xl font-semibold">Bagaimana cara saya memulai dengan Produk/Layanan Anda?</h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq2" class="hidden mt-2">Untuk memulai dengan Le France Courses, langkah pertama Anda adalah
+                    mendaftar akun. Setelah itu, jelajahi katalog kursus, pilih kursus yang diminati, dan pilih paket
+                    pembelajaran yang sesuai. Lakukan proses pembayaran jika diperlukan. Setelah pembayaran selesai, Anda
+                    dapat langsung mengakses materi pembelajaran dan memulai perjalanan pembelajaran Anda. Selamat belajar!
+                </p>
+            </div>
+
+            <!-- ... Tambahkan FAQ Items lainnya sesuai kebutuhan -->
+
+        </div>
+
+        <script>
+            function toggleFAQ(faqId) {
+                const faqContent = document.getElementById(faqId);
+                faqContent.classList.toggle('hidden');
+            }
+        </script>
+
+    </body>
+
+    </html>
+
+
     <div class="flex items-center justify-center">
         <div class="mc4up-form-fields">
             <div class="es-field-wrap wrapemail" style="margin-bottom: 0px">
