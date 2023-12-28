@@ -9,13 +9,13 @@ class MyProfileController extends Controller
 {
     public function edit()
     {
-        $user = auth()->user(); // Mendapatkan pengguna yang sedang login
+        $user = auth()->user();
         return view('dashboard.myprofile.index', compact('user'));
     }
 
     public function update(Request $request)
     {
-        $user = auth()->user(); // Mendapatkan pengguna yang sedang login
+        $user = auth()->user();
 
         // Validasi data yang dikirim
         $validatedData = $request->validate([
@@ -33,7 +33,7 @@ class MyProfileController extends Controller
 
         // Perbarui password jika diisi dalam form
         if ($request->filled('password')) {
-            $user->password = bcrypt($validatedData['password']); // pastikan Anda melakukan hashing password
+            $user->password = bcrypt($validatedData['password']);
         }
 
         // Simpan perubahan

@@ -43,8 +43,6 @@
                 <input type="password" name="password" id="password" class="form-input rounded-md shadow-sm mt-1 block w-full">
             </div>
 
-            <!-- Jika Anda ingin konfirmasi password, tambahkan field berikut -->
-
             <div class="form-group mb-4">
                 <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-input rounded-md shadow-sm mt-1 block w-full">
