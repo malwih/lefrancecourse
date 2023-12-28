@@ -44,12 +44,12 @@
             </div>
 
             <!-- Jika Anda ingin konfirmasi password, tambahkan field berikut -->
-            <!--
-      <div class="form-group mb-4">
-        <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-        <input type="password" name="password_confirmation" id="password_confirmation" class="form-input rounded-md shadow-sm mt-1 block w-full">
-      </div>
-      -->
+
+            <div class="form-group mb-4">
+                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-input rounded-md shadow-sm mt-1 block w-full">
+            </div>
+
 
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update Profile</button>
         </form>
