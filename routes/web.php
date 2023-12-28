@@ -33,7 +33,7 @@ Route::get('/', function () {
 Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Course Categories',
         'categories' => Category::all()
@@ -47,18 +47,36 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function() {
+Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
 
-Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
--> middleware('auth');
+Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])
+    ->middleware('auth');
 
+// Modifikasi tampilan dashboard
+Route::middleware(['auth'])->group(function () {
+    // Dashboard
+    Route::get('/dashboard', [DashboardCourseController::class, 'index'])->name('dashboard');
+    // Courses
+    Route::get('/course/{id}/take', [CourseController::class, 'take'])->name('course.take');
+    Route::get('/course/{id}/complete', [CourseController::class, 'complete'])->name('course.complete');
+});
+
+//Menambah Route myprofile
+// Route Edit Profile
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/editprofile', [MyProfileController::class, 'edit'])->name('editprofile.edit');
+    Route::put('/dashboard/editprofile', [MyProfileController::class, 'update'])->name('editprofile.update');
+    Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
+});
 
 Route::resource('/dashboard/courses', DashboardCourseController::class)
-->middleware('auth');
+    ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+Route::resource('/dashboard/news', AdminCategoryController::class)->except('show')->middleware('admin');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

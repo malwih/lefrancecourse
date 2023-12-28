@@ -23,7 +23,7 @@ class User extends Authenticatable
     //     'password',
     // ];
 
-    protected $guarded = ['id','id_google'];
+    protected $guarded = ['id', 'id_google'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,8 +45,26 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    // public function courses()
+    // {
+    //     return $this->hasMany(Course::class);
+    // }
+
+    // Course
     public function courses()
     {
-        return $this->hasMany(Course::class);
+        return $this->belongsToMany(Course::class)
+            ->withPivot('is_active', 'is_completed')
+            ->withTimestamps();
+    }
+
+    public function activeCourses()
+    {
+        return $this->courses()->wherePivot('is_active', true);
+    }
+
+    public function completedCourses()
+    {
+        return $this->courses()->wherePivot('is_completed', true);
     }
 }
