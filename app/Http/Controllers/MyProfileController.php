@@ -7,10 +7,16 @@ use App\Models\User;
 
 class MyProfileController extends Controller
 {
-    public function edit()
+    public function index()
     {
         $user = auth()->user();
         return view('dashboard.myprofile.index', compact('user'));
+    }
+
+    public function edit()
+    {
+        $user = auth()->user();
+        return view('dashboard.myprofile.editprofile', compact('user'));
     }
 
     public function update(Request $request)
