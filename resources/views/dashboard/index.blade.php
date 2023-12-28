@@ -7,20 +7,20 @@
       <h1 class="text-3xl font-bold text-black mb-6">Dashboard</h1>
       <div class="flex items-center">
         <p class="text-lg font-semibold me-4">Welcome, {{ $user->name }}</p>
-        @if($user->activeCourses()->count() === 0)
-        <a href="{{ route('course.create') }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Tambah Course</a>
-        @else
-        <p>Anda memiliki course yang sedang aktif. Selesaikan terlebih dahulu sebelum menambahkan yang lain.</p>
-        @endif
+        <a href="{{ route('dashboard') }}" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Tambah Course</a>
       </div>
     </div>
 
     @if(session()->has('error'))
-    <!-- Pesan error -->
+    <div class="flex items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-900 dark:text-red-400 dark:border-red-800" role="alert">
+      {{ session('error') }}
+    </div>
     @endif
 
     @if(session()->has('success'))
-    <!-- Pesan sukses -->
+    <div class="flex items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-900 dark:text-green-400 dark:border-green-800" role="alert">
+      {{ session('success') }}
+    </div>
     @endif
 
     <div class="mb-6">
