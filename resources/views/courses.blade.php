@@ -98,7 +98,7 @@
                         class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">
                         Rp2,000,000</p>
                 </div>
-                <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Beginners</h1>
+                <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">{{ $course->title }}</h1>
                 <div class="my-4">
                     <div class="flex space-x-1 items-center">
                         <span>

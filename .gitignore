@@ -2,9 +2,7 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage/img
 /storage/*.key
-/vendor
 .env.backup
 .env.production
 .phpunit.result.cache
