@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Auth;
 class DashboardCourseController extends Controller
 {
 
-    // public function index()
-    // {
-    //     return view('dashboard.courses.index', [
-    //         'courses' => Course::where('user_id', auth()->user()->id)->get()
-    //     ]);
-    // }
+    public function index()
+    {
+        return view('dashboard.courses.index', [
+            'courses' => Course::where('user_id', auth()->user()->id)->get()
+        ]);
+    }
 
     //Menambah Fungsi untuk courses
-    public function index()
+    public function dashboard()
     {
         $user = Auth::user();
         $courses = $user->courses; // Mengambil daftar course yang sudah diambil oleh user

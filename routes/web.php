@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\NewsDashboardController;
 use App\Http\Controllers\GoogleController;
 
 /*
@@ -57,7 +58,7 @@ Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'c
 // Modifikasi tampilan dashboard
 Route::middleware(['auth'])->group(function () {
     // Dashboard
-    Route::get('/dashboard', [DashboardCourseController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardCourseController::class, 'dashboard'])->name('dashboard');
     // Courses
     Route::get('/course/{id}/take', [CourseController::class, 'take'])->name('course.take');
     Route::get('/course/{id}/complete', [CourseController::class, 'complete'])->name('course.complete');
@@ -71,12 +72,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
 });
 
-Route::resource('/dashboard/courses', DashboardCourseController::class)
+Route::resource('/dashboard/courses', DashboardCourseController::class)->except('show')
     ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
-Route::resource('/dashboard/news', AdminCategoryController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/news', NewsDashboardController::class)->except('show')->middleware('admin');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

@@ -43,7 +43,6 @@
                             {{ $course->title }}
                         </th>
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            {{ $course->category->name }}
                         </th>
                         <td class="flex col-lg-8 mt-5">
                             <a href="/dashboard/courses/{{ $course->slug }}"><span data-feather="eye" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-1 rounded"></span></a>

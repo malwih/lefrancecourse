@@ -29,6 +29,7 @@
       <div class="mb-4">
         <h3 class="text-lg font-semibold">{{ $course->title }}</h3>
         <p>{{ $course->excerpt }}</p>
+        <p>{{ $course->body }}</p>
         @if($course->is_active)
         @if($course->is_completed)
         <p>Course Completed</p>
