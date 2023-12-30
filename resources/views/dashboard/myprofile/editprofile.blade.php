@@ -22,34 +22,53 @@
         <form action="{{ route('editprofile.update') }}" method="POST">
             @csrf
             @method('PUT')
-
-            <div class="form-group mb-4">
-                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" name="name" id="name" value="{{ $user->name }}" class="form-input rounded-md shadow-sm mt-1 block w-full" required>
+            <div class="bg-white overflow-hidden shadow rounded-lg border">
+                <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+                    <dl class="sm:divide-y sm:divide-gray-200">
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Full name
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                <input type="text" name="name" id="name" value="{{ $user->name }}" class="form-input border-2 border-gray-200 rounded-md shadow-sm mt-1 block w-full py-2 px-2" required>
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Username
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                <input type="text" name="username" id="username" value="{{ $user->username }}" class="form-input border-2 border-gray-200 rounded-md shadow-sm mt-1 block w-full py-2 px-2" required>
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Email
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                <input type="text" name="email" id="email" value="{{ $user->email }}" class="form-input border-2 border-gray-200 rounded-md shadow-sm mt-1 block w-full py-2 px-2" required>
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Password
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                <input type="password" name="password" id="password" class="form-input border-2 border-gray-200 rounded-md shadow-sm mt-1 block w-full py-2 px-2" placeholder="(Optional)">
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Confirm Password
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-input border-2 border-gray-200 rounded-md shadow-sm mt-1 block w-full py-2 px-2" placeholder="(Optional)">
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
-
-            <div class="form-group mb-4">
-                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                <input type="text" name="username" id="username" value="{{ $user->username }}" class="form-input rounded-md shadow-sm mt-1 block w-full" required>
-            </div>
-
-            <div class="form-group mb-4">
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" name="email" id="email" value="{{ $user->email }}" class="form-input rounded-md shadow-sm mt-1 block w-full" required>
-            </div>
-
-            <div class="form-group mb-4">
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                <input type="password" name="password" id="password" class="form-input rounded-md shadow-sm mt-1 block w-full">
-            </div>
-
-            <div class="form-group mb-4">
-                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-                <input type="password" name="password_confirmation" id="password_confirmation" class="form-input rounded-md shadow-sm mt-1 block w-full">
-            </div>
-
-
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update Profile</button>
+            <button type="submit" class="block w-full bg-orange-500 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Update Profile</button>
         </form>
     </div>
 </div>

@@ -30,8 +30,8 @@
 
     <body class="bg-gray-100">
 
-        <div class="container mx-auto p-8">
-            <div class="slider-container">
+        <div class="container mx-auto py-20">
+            <div class="slider-container w-500 h-96">
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide">
@@ -86,7 +86,7 @@
 
 
 
-    <div class="min-h-screen bg-gradient-to-tr from-red-300 to-yellow-200 flex justify-center items-center py-20">
+    <div class="min-h-screen bg-gradient-to-tr from-orange-300 to-orange-200 flex justify-center items-center py-20">
         <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
             <div
                 class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
@@ -225,8 +225,7 @@
                             @else
                                 <a href="/courses/{{ $course->slug }}">
                                     <img class="object-cover w-full h-full rounded-t-lg"
-                                        src="https://source.unsplash.com/500x400?{{ $course->category->name }}"
-                                        alt="{{ $course->category->name }}" />
+                                        src="https://thumbs.dreamstime.com/b/people-hold-banner-students-group-big-blank-poster-peaceful-protest-stop-war-appeal-persons-meeting-parade-characters-young-244730079.jpg"/>
                                 </a>
                             @endif
                         </div>

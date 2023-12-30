@@ -11,7 +11,7 @@
         </div>
 
 
-        <a href="/dashboard/courses/create" class="text-white bg-orange-500 hover:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create New Course</a>
+        <a href="/dashboard/courses/create" class="text-white bg-orange-500 hover:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Create New Class</a>
 
         @if(session()->has('success'))
         <div class="flex items-center p-4 mt-8 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-900 dark:text-green-400 dark:border-green-800" role="alert">
@@ -28,8 +28,9 @@
                 <thead class="text-xs text-gray-100 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
                     <tr>
                         <th scope="col" class="px-6 py-3">No</th>
-                        <th scope="col" class="px-6 py-3">Title</th>
-                        <th scope="col" class="px-6 py-3">Category</th>
+                        <th scope="col" class="px-6 py-3">Name Class</th>
+                        <th scope="col" class="px-6 py-3">Term</th>
+                        <th scope="col" class="px-6 py-3">Price</th>
                         <th scope="col" class="px-6 py-3">Action</th>
                     </tr>
                 </thead>
@@ -43,7 +44,10 @@
                             {{ $course->title }}
                         </th>
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            {{ $course->category->name }}
+                            {{ $course->term }}
+                        </th>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
+                            {{ $course->price }}
                         </th>
                         <td class="flex col-lg-8 mt-5">
                             <a href="/dashboard/courses/{{ $course->slug }}"><span data-feather="eye" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-1 rounded"></span></a>

@@ -28,6 +28,17 @@ class DashboardCourseController extends Controller
         $user = Auth::user();
         $courses = $user->courses; // Mengambil daftar course yang sudah diambil oleh user
 
+        return view('dashboard.courses.index', [
+            'user' => $user,
+            'courses' => $courses
+        ]);
+    }
+
+    public function dashboard()
+    {
+        $user = Auth::user();
+        $courses = $user->courses; // Mengambil daftar course yang sudah diambil oleh user
+
         return view('dashboard.index', [
             'user' => $user,
             'courses' => $courses
@@ -41,8 +52,9 @@ class DashboardCourseController extends Controller
     public function create()
     {
         return view('dashboard.courses.create', [
-            'categories' => Category::all()
+            'user' => User::all()
         ]);
+
     }
 
     /**
@@ -54,8 +66,10 @@ class DashboardCourseController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'slug' => 'required|unique:courses',
-            'category_id' => 'required',
-            'image' => 'image|file|max:1024',
+            'price' => 'required',
+            'term' => 'required|max:255',
+            'schedule' => 'required',
+            'image' => 'image|file|max:51200',
             'body' => 'required'
         ]);
 
