@@ -58,7 +58,7 @@ Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'c
 // Modifikasi tampilan dashboard
 Route::middleware(['auth'])->group(function () {
     // Dashboard
-    Route::get('/dashboard', [DashboardCourseController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardCourseController::class, 'dashboard'])->name('dashboard');
     // Courses
     Route::get('/course/{id}/take', [CourseController::class, 'take'])->name('course.take');
     Route::get('/course/{id}/complete', [CourseController::class, 'complete'])->name('course.complete');
