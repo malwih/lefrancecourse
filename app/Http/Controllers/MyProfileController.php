@@ -42,7 +42,7 @@ class MyProfileController extends Controller
             $user->password = bcrypt($validatedData['password']);
         }
 
-        // Simpan perubahan
+        // Simpan perubahan (jangan dihapus!!)
         $user->save();
 
         return redirect()->back()->with('success', 'Profil berhasil diperbarui!');
