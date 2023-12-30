@@ -60,6 +60,6 @@ class Course extends Model
 
     // Menambahkan dua kolom baru untuk status aktif dan selesai
     protected $fillable = [
-        'title', 'excerpt', 'body', 'price', 'term', 'schedule', 'user_id', 'image', 'published_at'
+        'title', 'excerpt', 'body', 'price', 'term', 'schedule', 'user_id', 'image', 'published_at', 
     ];
 }

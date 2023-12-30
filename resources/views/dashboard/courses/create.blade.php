@@ -63,7 +63,7 @@
 
     <div class="mb-3">
       <label for="image" class="form-label block text-large font-medium text-gray-900 dark:text-black">Upload Image</label>
-      <img class="img-preview img-fluid mb-3 col-sm-5">
+      <img class="w-1/2 h-1/2 img-preview img-fluid mb-3 mt-3 col-sm-5 d-block">
       <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
       @error('image')
       <div class="invalid-feedback">

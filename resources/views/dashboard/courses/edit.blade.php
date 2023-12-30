@@ -5,14 +5,14 @@
   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="text-3xl font-bold text-black mb-6">Edit Course</h1>
+            <h1 class="text-3xl font-bold text-black mb-6">Edit Class</h1>
         </div>
         <div class="col-lg-8">
             <form method="post" action="/dashboard/courses/{{ $course->slug }}" class="mb-5" enctype="multipart/form-data">
                 @method('put')
                 @csrf
                 <div class="max-w-sm mb-3">
-                    <label for="title" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Title</label>
+                    <label for="title" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Name Class</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" id="title" name="title" required autofocus value="{{ old('title', $course->title) }}">
                     @error('title')
                     <div class="invalid-feedback">
@@ -32,20 +32,37 @@
                 </div>
 
                 <div class="max-w-sm mb-3">
-                    <label for="category" class="form-label form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Kategori</label>
-                    <select class="form-select bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" name="category_id">
-                        @foreach ($categories as $category)
-                        @if(old('category_id', $course->category_id) == $category->id)
-                        <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                        @else
-                        <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                        @endif
-                        @endforeach
-                    </select>
+                    <label for="term" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Term</label>
+                    <input type="text" class="form-control @error('term') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" id="term" name="term" required value="{{ old('term', $course->term) }}">
+                    @error('term')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="max-w-sm mb-3">
+                    <label for="price" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Price</label>
+                    <input type="text" class="form-control @error('price') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" id="price" name="price" required value="{{ old('price', $course->price) }}">
+                    @error('price')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="max-w-sm mb-3">
+                    <label for="schedule" class="form-label block mb-2 text-large font-medium text-gray-900 dark:text-black">Schedule</label>
+                    <input type="text" class="form-control @error('schedule') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" id="schedule" name="schedule" required value="{{ old('schedule', $course->schedule) }}">
+                    @error('schedule')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
 
                 <div class="mb-3">
-                    <label for="image" class="form-label block text-large font-medium text-gray-900 dark:text-black">Course Image</label>
+                    <label for="image" class="form-label block text-large font-medium text-gray-900 dark:text-black">Change Image</label>
                     <input type="hidden" name="oldImage" value="{{ $course->image }}">
                     @if($course->image)
                     <img src="{{ asset('storage/' . $course->image) }}" class="w-1/2 h-1/2 img-preview img-fluid mb-3 mt-3 col-sm-5 d-block">
@@ -78,7 +95,7 @@
                 </div>
 
 
-                <button type="submit" class="text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Course</button>
+                <button type="submit" class="text-white bg-orange-500 hover:bg-orange-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Class</button>
             </form>
         </div>
     </div>
