@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Exception;
 use App\Models\User;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 class GoogleController extends Controller
@@ -23,8 +23,8 @@ class GoogleController extends Controller
             $user = Socialite::driver('google')->stateless()->user();
 
             $findUser = User::where('email', $user->email)->first();
-            
-            if($findUser){
+
+            if ($findUser) {
 
                 Auth::login($findUser);
 
