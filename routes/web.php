@@ -80,3 +80,7 @@ Route::resource('/dashboard/news', AdminCategoryController::class)->except('show
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+Route::get('/aboutus', function () {
+    return view('about');
+});
