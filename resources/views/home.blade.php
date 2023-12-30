@@ -22,6 +22,31 @@
                 class="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500">
         </div>
     </section>
+    <!-- Hero -->
+
+
+
+    <section class="p-20 dark:bg-gray-100 dark:text-gray-100">
+
+        <div class="container grid gap-2 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
+            <div class="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-white">
+                <span class="block mb-2 dark:text-gray-900">Le France Courses</span>
+                <h1 class="text-5xl font-extrabold dark:text-orange-500">Kursus Bahasa Perancis</h1>
+                <p class="my-8 dark:text-gray-800">
+                    <span class="font-medium dark:text-gray-900">Meraih kemampuan berbahasa Perancis bukan hanya sekadar
+                        impian,</span> tetapi merupakan suatu komitmen untuk meningkatkan keterampilan komunikasi lintas
+                    budaya.
+                </p>
+                <form novalidate="" action="" class="self-stretch space-y-3">
+                    <a href="/register"><button type="button"
+                            class="w-full py-2 font-semibold rounded dark:bg-orange-500 hover:bg-orange-400 dark:text-white">Join
+                            Our Courses</button></a>
+                </form>
+            </div>
+            <img src="../storage/img/hero-home.jpg" alt=""
+                class="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500">
+        </div>
+    </section>
 
     <!-- Mengapa Le France Courses? -->
     <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5 mb-10">
@@ -37,10 +62,12 @@
                                 <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Instruktur Berkualitas Tinggi</h3>
                             </div>
                             <p class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">"Le France Courses" memiliki tim pengajar yang sangat berkualitas
+                            <p class="mb-2 text-gray-600">"Le France Courses" memiliki tim pengajar yang sangat
+                                berkualitas
                                 dan berkomitmen untuk memberikan pengalaman pembelajaran yang terbaik. Instruktur kami
                                 adalah penutur asli bahasa Perancis atau ahli yang memiliki keahlian mendalam dalam
-                                pengajaran bahasa. Dengan demikian, peserta kursus dapat belajar dari para profesional yang
+                                pengajaran bahasa. Dengan demikian, peserta kursus dapat belajar dari para profesional
+                                yang
                                 berpengalaman.</p>
                         </div>
                     </div>
@@ -54,8 +81,10 @@
                             </div>
                             <p class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">------------</p>
                             <p class="mb-2 text-gray-600">Kursus bahasa Perancis di "Le France Courses" dirancang dengan
-                                pendekatan interaktif untuk memastikan peserta terlibat aktif dalam pembelajaran. Melalui
-                                percakapan, permainan peran, dan aktivitas interaktif lainnya, peserta dapat meningkatkan
+                                pendekatan interaktif untuk memastikan peserta terlibat aktif dalam pembelajaran.
+                                Melalui
+                                percakapan, permainan peran, dan aktivitas interaktif lainnya, peserta dapat
+                                meningkatkan
                                 keterampilan berbicara mereka dengan lebih percaya diri.</p>
                         </div>
                     </div>
@@ -67,13 +96,16 @@
                         <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
                         <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
                             <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Fokus pada Keterampilan Praktis</h3>
+                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Fokus pada Keterampilan Praktis
+                                </h3>
                             </div>
                             <p class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">------------</p>
                             <p class="mb-2 text-gray-600">"Le France Courses" menempatkan vokus pada pengembangan
                                 keterampilan praktis dalam bahasa Perancis. Kami memberikan latihan-latihan yang relevan
-                                dengan kehidupan sehari-hari, seperti situasi percakapan di restoran, perjalanan, atau saat
-                                berbelanja. Hal ini membantu peserta untuk langsung mengaplikasikan pengetahuan mereka dalam
+                                dengan kehidupan sehari-hari, seperti situasi percakapan di restoran, perjalanan, atau
+                                saat
+                                berbelanja. Hal ini membantu peserta untuk langsung mengaplikasikan pengetahuan mereka
+                                dalam
                                 konteks kehidupan nyata.</p>
                         </div>
                     </div>
@@ -86,10 +118,12 @@
                                 <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Fleksibilitas Jadwal</h3>
                             </div>
                             <p class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase">------------</p>
-                            <p class="mb-2 text-gray-600">Kami memahami bahwa kehidupan sehari-hari sering kali sibuk, oleh
+                            <p class="mb-2 text-gray-600">Kami memahami bahwa kehidupan sehari-hari sering kali sibuk,
+                                oleh
                                 karena itu, "Le France Courses" menawarkan fleksibilitas jadwal. Dengan opsi kelas pagi,
                                 siang, atau malam, peserta dapat memilih waktu yang paling sesuai dengan jadwal mereka,
-                                memungkinkan mereka untuk tetap fokus pada pembelajaran bahasa Perancis tanpa mengorbankan
+                                memungkinkan mereka untuk tetap fokus pada pembelajaran bahasa Perancis tanpa
+                                mengorbankan
                                 kewajiban lainnya.</p>
                         </div>
                     </div>
@@ -99,12 +133,14 @@
                         <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
                         <div class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg">
                             <div class="flex items-center -mt-1">
-                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Materi Pembelajaran yang Terstruktur
+                                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Materi Pembelajaran yang
+                                    Terstruktur
                                 </h3>
                             </div>
                             <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
                             <p class="mb-2 text-gray-600">Kursus bahasa Perancis di "Le France Courses" disusun secara
-                                sistematis untuk memastikan perkembangan yang konsisten. Mulai dari tingkat pemula hingga
+                                sistematis untuk memastikan perkembangan yang konsisten. Mulai dari tingkat pemula
+                                hingga
                                 tingkat lanjutan, peserta akan dibimbing melalui materi pembelajaran yang terstruktur,
                                 memungkinkan mereka untuk membangun dasar yang kokoh dan kemudian memperluas kemampuan
                                 bahasa Perancis mereka.</p>
@@ -125,7 +161,8 @@
             <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                 <blockquote>
                     <p class="text-lg font-medium">
-                        “Dalam perjalanan karier saya, saya telah merancang program pembelajaran yang menarik dan efektif
+                        “Dalam perjalanan karier saya, saya telah merancang program pembelajaran yang menarik dan
+                        efektif
                         untuk meningkatkan kemampuan berbicara, menulis, mendengarkan, dan membaca siswa dalam Bahasa
                         Perancis.”
                     </p>
@@ -151,7 +188,8 @@
                 <blockquote>
                     <p class="text-lg font-medium">
                         “Saya aktif menggunakan pendekatan interaktif yang melibatkan siswa secara langsung dalam
-                        pembelajaran. Saya sering mengorganisir kegiatan kelompok, simulasi situasi nyata, dan diskusi yang
+                        pembelajaran. Saya sering mengorganisir kegiatan kelompok, simulasi situasi nyata, dan diskusi
+                        yang
                         merangsang pemikiran kreatif serta meningkatkan keterampilan komunikasi dalam Bahasa Perancis.”
                     </p>
                 </blockquote>
@@ -200,7 +238,8 @@
             <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                 <blockquote>
                     <p class="text-lg font-medium">
-                        “Saya mendorong siswa untuk memahami dan menghargai perbedaan budaya, serta memotivasi mereka untuk
+                        “Saya mendorong siswa untuk memahami dan menghargai perbedaan budaya, serta memotivasi mereka
+                        untuk
                         berkomunikasi dengan keberanian dalam bahasa Perancis.”
                     </p>
                 </blockquote>
@@ -215,4 +254,85 @@
             </div>
         </figure>
     </div>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <title>Accordion FAQ - Halaman Utama</title>
+    </head>
+
+    <body class="bg-gray-100 font-sans">
+
+        <div class="container mx-auto p-8">
+            <h1 class="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
+
+            <!-- FAQ Item 1 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq1')">
+                    <h2 class="text-xl font-semibold">Apa itu Le France Courses?</h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq1" class="hidden mt-2">Le France Courses adalah platform pembelajaran daring yang
+                    menawarkan berbagai kursus berkualitas tinggi dengan fokus pada bahasa dan budaya Prancis. Didesain
+                    untuk memenuhi kebutuhan pembelajar dari berbagai tingkat, Le France Courses menyediakan pengalaman
+                    belajar interaktif yang mendalam untuk meningkatkan keterampilan bahasa Prancis dan pemahaman budaya
+                    Perancis.</p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq2')">
+                    <h2 class="text-xl font-semibold">Apa saja kursus yang ditawarkan oleh Le France Courses?</h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq2" class="hidden mt-2">Le France Courses menyediakan berbagai kursus mulai dari tingkat
+                    pemula hingga tingkat lanjutan. Kursus-kursus tersebut melibatkan pelajaran bahasa Prancis, literatur
+                    Prancis, sejarah, seni, dan topik-topik lain yang terkait dengan budaya Perancis.</p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq3')">
+                    <h2 class="text-xl font-semibold">Bagaimana cara mendaftar dan mengakses kursus di Le France Courses?
+                    </h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq3" class="hidden mt-2">Untuk mendaftar, pengguna dapat mengakses situs web resmi Le France
+                    Courses dan membuat akun pengguna. Setelah akun dibuat, pengguna dapat memilih kursus yang diinginkan
+                    dan mendaftar. Akses ke materi pembelajaran dan sumber daya lainnya akan diberikan setelah pendaftaran
+                    berhasil.</p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="mb-4">
+                <div class="flex items-center justify-between border-b border-gray-300 cursor-pointer"
+                    onclick="toggleFAQ('faq4')">
+                    <h2 class="text-xl font-semibold">Apakah tersedia dukungan tutor atau mentor?
+                    </h2>
+                    <span class="text-gray-500">▼</span>
+                </div>
+                <p id="faq4" class="hidden mt-2">Ya, Le France Courses menyediakan dukungan tutor atau mentor yang
+                    berpengalaman untuk membimbing peserta selama proses pembelajaran. Peserta dapat mengajukan pertanyaan,
+                    berpartisipasi dalam diskusi, dan mendapatkan umpan balik untuk meningkatkan pemahaman mereka.</p>
+            </div>
+
+        </div>
+
+        <script>
+            function toggleFAQ(faqId) {
+                const faqContent = document.getElementById(faqId);
+                faqContent.classList.toggle('hidden');
+            }
+        </script>
+
+    </body>
+
+    </html>
 @endsection
