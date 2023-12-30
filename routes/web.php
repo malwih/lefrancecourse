@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
 use App\Http\Controllers\NewsDashboardController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\NewsDashboardController;
 
 /*
 |--------------------------------------------------------------------------
