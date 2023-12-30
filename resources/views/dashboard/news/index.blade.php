@@ -23,36 +23,7 @@
       </div>
       @endif
 
-        <div class="relative table-responsive col-lg-8 mt-5">
-            <table class="w-full text-lg text-left rtl:text-right text-gray-900 dark:text-gray-900">
-                <thead class="text-xs text-gray-100 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-100">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">No</th>
-                        <th scope="col" class="px-6 py-3">Title</th>
-                        <th scope="col" class="px-6 py-3">Category</th>
-                        <th scope="col" class="px-6 py-3">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                    <tr class="bg-white border-b dark:bg-gray-100 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            
-                        </th>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            
-                        </th>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            
-                        </th>
-                        <td class="flex col-lg-8 mt-5">
 
-                        </td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
     </div>
 </div>
 

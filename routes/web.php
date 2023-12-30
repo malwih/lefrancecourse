@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\NewsDashboardController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\NewsDashboardController;
 
@@ -72,7 +73,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
 });
 
-Route::resource('/dashboard/courses', DashboardCourseController::class)
+Route::resource('/dashboard/courses', DashboardCourseController::class)->except('show')
     ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
