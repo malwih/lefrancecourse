@@ -10,9 +10,9 @@ use App\Models\User;
 class CourseController extends Controller
 {
     public function index()
-    {  
+    {
         $title = '';
-        if(request('category')) {
+        if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
             $title = ' in ' . $category->name;
         }
@@ -21,15 +21,6 @@ class CourseController extends Controller
             "title" => "All Course" . $title,
             "active" => 'courses',
             "courses" => Course::latest()->filter(request(['search', 'category']))->paginate(7)->withQueryString()
-        ]);
-    }
-
-    public function show(Course $course)
-    {
-        return view('course', [
-            "title" => "Single Course",
-            "active" => 'courses',
-            "course" => $course
         ]);
     }
 }
