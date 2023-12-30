@@ -21,10 +21,9 @@
 
             @if($course->image)
             <div style="max-height: 350px; overflow:hidden;">
-                <img src="{{ asset('storage/' . $course->image) }}" alt="{{ $course->category->name }}" class="img-fluid mt-3">
+                <img src="{{ asset('storage/' . $course->image) }}" class="img-fluid mt-3">
             </div>
             @else
-            <img src="https://source.unsplash.com/1200x400?{{ $course->category->name }}" alt="{{ $course->category->name }}" class="img-fluid mt-3">
             @endif
 
             <article class="my-3 fs-5">

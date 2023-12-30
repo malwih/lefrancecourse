@@ -31,7 +31,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/courses', [CourseController::class, 'index'], [NewsDashboardController::class]);
 Route::get('/courses/{course:slug}', [CourseController::class, 'show']);
 
 Route::get('/categories', function () {
@@ -70,14 +70,19 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/editprofile', [MyProfileController::class, 'edit'])->name('editprofile.edit');
     Route::put('/dashboard/editprofile', [MyProfileController::class, 'update'])->name('editprofile.update');
     Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
+
+    Route::get('/dashboard/addcourse', [DashboardCourseController::class, 'addcourse'])->name('addcourse');
 });
 
-Route::resource('/dashboard/courses', DashboardCourseController::class)->except('show')
+// Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
+// -> middleware('auth');
+
+Route::resource('/dashboard/courses', DashboardCourseController::class)
     ->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
-Route::resource('/dashboard/news', NewsDashboardController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/news', NewsDashboardController::class)->middleware('auth');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

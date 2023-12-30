@@ -25,11 +25,12 @@ class DashboardCourseController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
+        $news = $user->news;
         $courses = $user->courses; // Mengambil daftar course yang sudah diambil oleh user
 
         return view('dashboard.index', [
             'user' => $user,
-            'courses' => $courses
+            'courses' => $courses,
         ]);
     }
 
@@ -65,7 +66,7 @@ class DashboardCourseController extends Controller
 
         Course::create($validatedData);
 
-        return redirect('/dashboard/courses')->with('success', 'New course has been added!');
+        return redirect('/dashboard/courses')->with('success', 'New class has been added!');
     }
 
     public function show(Course $course)
@@ -86,7 +87,7 @@ class DashboardCourseController extends Controller
     {
         $rules = [
             'title' => 'required|max:255',
-            'image' => 'image|file|max:1024',
+            'image' => 'image|file|max:51200',
             'body' => 'required'
         ];
 
@@ -108,7 +109,7 @@ class DashboardCourseController extends Controller
 
         $course->update($validatedData);
 
-        return redirect('/dashboard/courses')->with('success', 'Course has been updated!');
+        return redirect('/dashboard/courses')->with('success', 'Class has been updated!');
     }
 
     public function destroy(Course $course)
@@ -118,7 +119,7 @@ class DashboardCourseController extends Controller
 
         $course->delete();
 
-        return redirect('/dashboard/courses')->with('success', 'Course has been deleted!');
+        return redirect('/dashboard/courses')->with('success', 'Class has been deleted!');
     }
 
     public function checkSlug(Request $request)
@@ -163,4 +164,37 @@ class DashboardCourseController extends Controller
 
         return redirect()->back()->with('success', 'Course berhasil diselesaikan.');
     }
+
+
+    public function addcourse(Course $course)
+    {
+        return view('dashboard.addcourse', [
+            'course' => $course
+        ]);
+    }
+
+    public function storecourse(Request $request)
+    {
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'required|unique:courses',
+            'price' => 'required',
+            'term' => 'required|max:255',
+            'schedule' => 'required',
+            'image' => 'image|file|max:51200',
+            'body' => 'required',
+        ]);
+
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('course-images');
+        }
+
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
+
+        Course::addcourse($validatedData);
+
+        return redirect('/dashboard/courses')->with('success', 'New class has been added!');
+    }
+
 }
