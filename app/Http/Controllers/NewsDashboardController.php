@@ -8,6 +8,6 @@ class NewsDashboardController extends Controller
 {
     public function index()
     {
-        return view('index.blade.php');
+        return view('dashboard.news.index');
     }
 }

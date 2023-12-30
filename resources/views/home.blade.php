@@ -275,16 +275,41 @@
     </html>
 
 
-    <div class="flex items-center justify-center">
-        <div class="mc4up-form-fields">
-            <div class="es-field-wrap wrapemail" style="margin-bottom: 0px">
-                <input class="es_required_field es_txt_email ig es_form_field_email mt-1 p-1 border rounded-md"
-                    type="email" name="EMAIL" placeholder="Your email address" style="padding: 4px"
-                    fdprocessedid="7ivk73">
-                <span class="es_spinner image spinnercusti" style="display: none" id="spinner-image"></span>
-                <input type="submit" value="Send" class="px-2 py-1 bg-blue-500 text-white rounded-md text-xs"
-                    id="es_subscription_form_submit_1" fdprocessedid="tqruts">
+    {{-- Contact us --}}
+<div class="mb-7 bg-gray-100 flex items-center justify-center">
+    <div class="container max-w-screen">
+      <div>
+  
+        <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+          <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+            <div class="text-gray-600">
+              <p class="font-medium text-lg">Contact Us</p>
+              <p>Please fill out all the fields.</p>
             </div>
+  
+            <div class="lg:col-span-2">
+              <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <div class="md:col-span-5">
+                  <label for="full_name">Name</label>
+                  <input placeholder="Your Name" type="text" name="name" id="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+                </div>
+  
+                <div class="md:col-span-5">
+                    <label for="email">Message</label>
+					<textarea placeholder="Message" class="w-full h-32 border mt-1 bg-gray-100 text-gray-900 p-3 rounded"></textarea>
+				</div>
+        
+                <div class="md:col-span-5 text-right">
+                  <div class="inline-flex items-end">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 @endsection
