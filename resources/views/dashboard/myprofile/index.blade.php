@@ -51,10 +51,10 @@
                             Course Taken
                         </dt>
                         <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                            @forelse ($user->courses as $course)
+                            @forelse ($user->courses->where('pivot.is_active', true) as $course)
                             {{ $course->title }}
                             @empty
-                            No courses taken yet.
+                            No active courses taken yet.
                             @endforelse
                         </dd>
                     </div>
