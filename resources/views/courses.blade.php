@@ -3,40 +3,13 @@
 @section('container')
 <!-- Harga Kursus -->
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Image Slider</title>
-    <style>
-        /* Custom styles for the slider */
-        .slider-container {
-            overflow: hidden;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-        }
-    </style>
-</head>
-
 <body class="bg-gray-100">
-
-    <<<<<<< HEAD <div class="container mx-auto p-8">
+    <div class="container mx-auto p-8">
         <div class="slider-container">
             <div class="slider">
                 <!-- Slide 1 -->
                 <div class="slide">
                     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Slide 1" class="w-full h-auto">
-                    =======
                     <div class="container mx-auto py-20">
                         <div class="slider-container w-500 h-96">
                             <div class="slider">
@@ -54,38 +27,35 @@
                                 <div class="slide">
                                     <img src="https://images.unsplash.com/photo-1561835491-ed2567d96913?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Slide 3" class="w-full h-auto">
                                 </div>
-                                >>>>>>> e5a5e980596d3cec1ee7225701042039383210cd
                             </div>
+                            <!-- Slide 2 -->
+                            <div class="slide">
+                                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Slide 2" class="w-full h-auto">
+                                <script>
+                                    // JavaScript for slider functionality
+                                    let currentIndex = 0;
+                                    const slides = document.querySelectorAll('.slide');
+                                    const totalSlides = slides.length;
 
-                            <<<<<<< HEAD <!-- Slide 2 -->
-                                <div class="slide">
-                                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" alt="Slide 2" class="w-full h-auto">
-                                    =======
-                                    <script>
-                                        // JavaScript for slider functionality
-                                        let currentIndex = 0;
-                                        const slides = document.querySelectorAll('.slide');
-                                        const totalSlides = slides.length;
-
-                                        function showSlide(index) {
-                                            if (index < 0) {
-                                                currentIndex = totalSlides - 1;
-                                            } else if (index >= totalSlides) {
-                                                currentIndex = 0;
-                                            } else {
-                                                currentIndex = index;
-                                            }
-
-                                            const translateValue = -currentIndex * 100 + '%';
-                                            document.querySelector('.slider').style.transform = 'translateX(' + translateValue + ')';
+                                    function showSlide(index) {
+                                        if (index < 0) {
+                                            currentIndex = totalSlides - 1;
+                                        } else if (index >= totalSlides) {
+                                            currentIndex = 0;
+                                        } else {
+                                            currentIndex = index;
                                         }
 
-                                        // Auto slide every 3 seconds
-                                        setInterval(() => {
-                                            currentIndex++;
-                                            showSlide(currentIndex);
-                                        }, 3000);
-                                    </script>
+                                        const translateValue = -currentIndex * 100 + '%';
+                                        document.querySelector('.slider').style.transform = 'translateX(' + translateValue + ')';
+                                    }
+
+                                    // Auto slide every 3 seconds
+                                    setInterval(() => {
+                                        currentIndex++;
+                                        showSlide(currentIndex);
+                                    }, 3000);
+                                </script>
 
 </body>
 
@@ -100,7 +70,6 @@
                 <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Colors" />
                 <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">
                     Rp2,000,000</p>
-                >>>>>>> e5a5e980596d3cec1ee7225701042039383210cd
             </div>
 
             <!-- Slide 3 -->
@@ -120,9 +89,6 @@
             <div class="shadow-lg rounded-lg">
                 <div class="relative overflow-hidden">
                     @if ($course->image)
-                    <a href="/courses/{{ $course->slug }}">
-                        <img class="object-cover rounded-t-lg w-full h-full img-fluid" src="{{ asset('storage/' . $courses[0]->image) }}" alt="{{ $courses[0]->category->name }}">
-                    </a>
                     @else
                     <a href="/courses/{{ $course->slug }}">
                         <img class="object-cover w-full h-full rounded-t-lg" src="https://thumbs.dreamstime.com/b/people-hold-banner-students-group-big-blank-poster-peaceful-protest-stop-war-appeal-persons-meeting-parade-characters-young-244730079.jpg" />
@@ -153,9 +119,6 @@
             <div class="shadow-lg rounded-lg">
                 <div class="relative overflow-hidden">
                     @if ($course->image)
-                    <a href="/courses/{{ $course->slug }}">
-                        <img class="object-cover rounded-t-lg w-full h-full img-fluid" src="{{ asset('storage/' . $courses[0]->image) }}" alt="{{ $courses[0]->category->name }}">
-                    </a>
                     @else
 
                     @endif

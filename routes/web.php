@@ -72,8 +72,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
 });
 
-Route::resource('/dashboard/courses', DashboardCourseController::class)->except('show')
-    ->middleware('auth');
+Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])->middleware('auth');
+
+Route::resource('/dashboard/courses', DashboardCourseController::class)->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 

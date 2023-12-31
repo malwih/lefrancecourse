@@ -86,7 +86,7 @@ class DashboardCourseController extends Controller
     {
         $rules = [
             'title' => 'required|max:255',
-            'image' => 'image|file|max:1024',
+            'image' => 'image|file|max:51200',
             'body' => 'required'
         ];
 
