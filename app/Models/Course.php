@@ -13,7 +13,9 @@ class Course extends Model
     // Menghubungkan dengan Model User
     public function users()
     {
-        return $this->belongsToMany(User::class)->withPivot('is_active', 'is_completed');
+        return $this->belongsToMany(User::class)
+            ->withPivot('is_active', 'is_completed')
+            ->withTimestamps();
     }
 
     // protected $fillable = ['title','excerpt','body'];
@@ -58,6 +60,6 @@ class Course extends Model
 
     // Menambahkan dua kolom baru untuk status aktif dan selesai
     protected $fillable = [
-        'title', 'excerpt', 'body', 'price', 'term', 'schedule', 'user_id', 'image', 'published_at',
+        'title', 'excerpt', 'body', 'price', 'term', 'schedule', 'user_id', 'image', 'published_at', 'created_at', 'link_payment', 
     ];
 }

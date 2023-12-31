@@ -11,6 +11,7 @@ use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardCourseController;
 use App\Http\Controllers\NewsDashboardController;
+use App\Http\Controllers\StudentListController;
 use App\Http\Controllers\GoogleController;
 
 /*
@@ -86,6 +87,11 @@ Route::resource('/dashboard/courses', DashboardCourseController::class)
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
 Route::resource('/dashboard/news', NewsDashboardController::class)->middleware('auth');
+Route::resource('/dashboard/studentlist', StudentListController::class)->middleware('auth');
+
+Route::get('/dashboard/studentlist', [StudentListController::class, 'index'])->name('studentlist.index');
+Route::get('/dashboard/studentlist/{student}/edit', [StudentListController::class, 'edit'])->name('studentlist.edit');
+Route::delete('/dashboard/studentlist/{courseuser}', [StudentListController::class, 'destroy'])->name('studentlist.destroy');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);

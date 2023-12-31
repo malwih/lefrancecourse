@@ -14,9 +14,9 @@
                     <span>Courses</span>
                 </li>
             </a>
-            <a href="">
+            <a href="/news">
                 <li class="p-3 xl:p-6 hover:bg-gray-300 text-orange-500 {{ $title === 'News' ? 'active' : '' }}">
-                    <span>About Us</span>
+                    <span>News</span>
                 </li>
             </a>
         </ul>

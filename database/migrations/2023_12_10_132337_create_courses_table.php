@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('term');
             $table->string('schedule');
+            $table->string('link_payment');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });

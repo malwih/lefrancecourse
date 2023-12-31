@@ -15,11 +15,20 @@ use Illuminate\Support\Facades\Auth;
 class NewsDashboardController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.news.index', [
-            'news' => News::where('user_id', auth()->user()->id)->get()
-        ]);
+        $sort = $request->query('sort') == 'desc' ? 'desc' : 'asc';
+    $search = $request->query('search');
+
+    $news = News::where('user_id', auth()->user()->id)
+        ->when($search, function ($query) use ($search) {
+            return $query->where('title', 'like', '%' . $search . '%');
+        })
+        ->orderBy('title', $sort)
+        ->get();
+
+    return view('dashboard.news.index', compact('news'));
+
     }
 
     public function dashboard()
@@ -29,7 +38,7 @@ class NewsDashboardController extends Controller
 
         return view('dashboard.index', [
             'user' => $user,
-            'news' => $news
+            'news' => $news,
         ]);
     }
 
@@ -88,7 +97,7 @@ class NewsDashboardController extends Controller
         ];
 
         if ($request->slug != $news->slug) {
-            $rules['slug'] = 'required|unique:courses';
+            $rules['slug'] = 'required|unique:news';
         }
 
         $validatedData = $request->validate($rules);

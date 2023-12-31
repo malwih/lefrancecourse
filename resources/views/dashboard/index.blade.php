@@ -68,9 +68,11 @@
                 </li>
 
                 <div class="mt-8">
+                  <a href="{{ $course->link_payment }}">
                   <button class="bg-gray-400 hover:bg-gray-500 px-3 py-2 rounded-lg w-full text-white">
-                    Detail
+                    Payment Now
                   </button>
+                  </a>
                 </div>
               </ul>
             </div>

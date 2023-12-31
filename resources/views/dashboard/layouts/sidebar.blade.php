@@ -3,7 +3,7 @@
     <div class="flex flex-wrap bg-gray-100 w-full h-screen">
         <div class="w-full bg-white rounded p-12 pt-20 shadow-lg">
             <div class="flex justify-center items-center space-x-4 p-2 mb-2">
-                <img class="w-12 h-12 rounded-full" src="https://play-lh.googleusercontent.com/O8mvDQlw4AwmGfUrh4lviZD_PwwhRHz2etA25F77SbXrm3qEHOt2826aNkKar4D0yw" alt="{{ auth()->user()->name }}">
+                <img class="w-12 h-12 rounded-full" src="../storage/img/user.png" alt="{{ auth()->user()->name }}">
             </div>
             <ul class="space-y-2 text-sm font-medium">
                 <span>Student</span>
