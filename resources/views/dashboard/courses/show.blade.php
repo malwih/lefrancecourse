@@ -9,7 +9,7 @@
         <div class="flex">
             <a href="/dashboard/courses"><span data-feather="arrow-left" class="mr-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded"></span></a>
             <a href="/dashboard/courses/{{ $course->slug }}/edit"><span data-feather="edit" class="mr-1 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-1 px-1 rounded"></span></a>
-            <form action="/dashboard/courses/{{ $course->slug }}" method="post" class="d-inline">
+            <form action="/dashboard/courses/{{ $course->slug }}" method="course" class="d-inline">
                 @method('delete')
                 @csrf
                 <button onclick="return confirm('Are you sure?')"><span data-feather="x-circle" class="bg-red-600 hover:bg-red-700 text-white font-bold py-1 px-1 rounded"></span></button>

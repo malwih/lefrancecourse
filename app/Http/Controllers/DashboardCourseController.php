@@ -194,9 +194,8 @@ class DashboardCourseController extends Controller
         $courseUser = CourseUser::create([
             'course_id' => $validatedData['course_id'],
             'user_id' => $user->id,
-            'is_active' => true, // Atur status aktif ke true jika baru ditambahkan
-            'is_completed' => false, // Default nilai is_completed ke false
-            // ... (menambahkan field lainnya)
+            'is_active' => true,
+            'is_completed' => false,
         ]);
 
         if ($courseUser) {
