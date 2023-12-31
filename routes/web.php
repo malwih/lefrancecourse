@@ -95,3 +95,6 @@ Route::delete('/dashboard/studentlist/{courseuser}', [StudentListController::cla
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+// pdf reporting
+Route::get('/dashboard/studentlist/pdf', [StudentListController::class, 'generatePDF'])->name('studentlist.pdf');
