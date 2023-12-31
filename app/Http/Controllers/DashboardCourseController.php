@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
+use App\Models\User;
 use App\Models\Course;
 use App\Models\CourseUser;
 use App\Models\Category;
-use App\Models\User;
-use Illuminate\Http\Request;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 
 class DashboardCourseController extends Controller
@@ -54,6 +55,7 @@ class DashboardCourseController extends Controller
             'price' => 'required',
             'term' => 'required|max:255',
             'schedule' => 'required',
+            'link_payment' => 'required|max:255',
             'image' => 'image|file|max:51200',
             'body' => 'required',
         ]);
@@ -194,8 +196,9 @@ class DashboardCourseController extends Controller
         $courseUser = CourseUser::create([
             'course_id' => $validatedData['course_id'],
             'user_id' => $user->id,
-            'is_active' => true,
-            'is_completed' => false,
+            'is_active' => true, // Atur status aktif ke true jika baru ditambahkan
+            'is_completed' => false, // Default nilai is_completed ke false
+            // ... (menambahkan field lainnya)
         ]);
 
         if ($courseUser) {

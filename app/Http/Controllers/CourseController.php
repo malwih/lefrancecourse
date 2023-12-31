@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\News;
+use App\Models\User;
 use App\Models\Course;
 use App\Models\Category;
-use App\Models\User;
+use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
@@ -21,6 +22,15 @@ class CourseController extends Controller
             "title" => "All Course" . $title,
             "active" => 'courses',
             "courses" => Course::latest()->filter(request(['search', 'category']))->paginate(7)->withQueryString()
+        ]);
+    }
+
+    public function show(Course $course)
+    {
+        return view('course', [
+            "title" => "$course->title",
+            "active" => 'courses',
+            "course" => $course
         ]);
     }
 }

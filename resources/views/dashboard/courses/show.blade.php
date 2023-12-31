@@ -4,7 +4,7 @@
 @section('container')
 
 <div class="p-10 sm:ml-64">
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
+  <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-20">
 
         <div class="flex">
             <a href="/dashboard/courses"><span data-feather="arrow-left" class="mr-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded"></span></a>
