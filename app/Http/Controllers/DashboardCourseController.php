@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\CourseUser;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -128,73 +129,80 @@ class DashboardCourseController extends Controller
         return response()->json(['slug' => $slug]);
     }
 
-    // Course yang student yang aktif
-    public function takeCourse(Request $request, Course $course)
+    // public function addcourse(Course $course)
+    // {
+    //     return view('dashboard.addcourse', [
+    //         'course' => $course
+    //     ]);
+    // }
+
+    public function addcourse()
     {
-        $user = Auth::users();
+        $courses = Course::all();
 
-        // Cek apakah user memiliki course aktif
-        $activeCourses = $user->courses()->wherePivot('is_active', true)->get();
-
-        if ($activeCourses->isNotEmpty()) {
-            return redirect()->back()->with('error', 'Anda masih memiliki course yang aktif.');
-        }
-
-        // Ambil course
-        $user->courses()->attach($course->id);
-
-        return redirect()->back()->with('success', 'Course berhasil diambil.');
-    }
-
-    public function completeCourse(Request $request, Course $course)
-    {
-        $user = Auth::users();
-
-        // Cek apakah user memiliki course yang diambil
-        $takenCourses = $user->courses()->wherePivot('is_completed', false)->get();
-
-        $isCourseTaken = $takenCourses->contains($course);
-
-        if (!$isCourseTaken) {
-            return redirect()->back()->with('error', 'Anda belum mengambil course ini.');
-        }
-
-        // Tandai course sebagai selesai
-        $user->courses()->updateExistingPivot($course->id, ['is_completed' => true]);
-
-        return redirect()->back()->with('success', 'Course berhasil diselesaikan.');
-    }
-
-
-    public function addcourse(Course $course)
-    {
         return view('dashboard.addcourse', [
-            'course' => $course
+            'courses' => $courses
         ]);
     }
 
-    public function storecourse(Request $request)
+    public function takeCourse(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'slug' => 'required|unique:courses',
-            'price' => 'required',
-            'term' => 'required|max:255',
+            'course_id' => 'required|exists:courses,id',
             'schedule' => 'required',
-            'image' => 'image|file|max:51200',
-            'body' => 'required',
+            'price' => 'required',
         ]);
 
-        if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('course-images');
+        $user = auth()->user();
+
+        // Periksa apakah pengguna memiliki kursus yang aktif pada CourseUser
+        $activeCourse = CourseUser::where('user_id', $user->id)
+            ->where('is_active', true)
+            ->first();
+
+        if ($activeCourse) {
+            return back()->with('error', 'Anda masih memiliki kursus yang aktif lainnya.');
         }
 
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
+        // Simpan data ke pivot table course_user
+        $courseUser = CourseUser::create([
+            'course_id' => $validatedData['course_id'],
+            'user_id' => $user->id,
+            'is_active' => true,
+            'is_completed' => false,
+        ]);
 
-        Course::addcourse($validatedData);
-
-        return redirect('/dashboard/courses')->with('success', 'New class has been added!');
+        if ($courseUser) {
+            return redirect()->route('dashboard')->with('success', 'Course added successfully.');
+        } else {
+            return back()->with('error', 'Failed to add course.');
+        }
     }
 
+
+    public function storeCourse(Request $request)
+    {
+        $validatedData = $request->validate([
+            'course_id' => 'required|exists:courses,id',
+            'schedule' => 'required',
+            'price' => 'required',
+        ]);
+
+        $user = auth()->user();
+
+        // Simpan data ke pivot table course_user
+        $courseUser = CourseUser::create([
+            'course_id' => $validatedData['course_id'],
+            'user_id' => $user->id,
+            'is_active' => true, // Atur status aktif ke true jika baru ditambahkan
+            'is_completed' => false, // Default nilai is_completed ke false
+            // ... (menambahkan field lainnya)
+        ]);
+
+        if ($courseUser) {
+            return back()->with('success', 'Course added successfully.');
+        } else {
+            return back()->with('error', 'Failed to add course.');
+        }
+    }
 }

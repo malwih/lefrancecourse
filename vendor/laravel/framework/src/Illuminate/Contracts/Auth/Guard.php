@@ -24,7 +24,6 @@ interface Guard
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
     public function user();
-
     /**
      * Get the ID for the currently authenticated user.
      *

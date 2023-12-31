@@ -62,6 +62,8 @@ Route::middleware(['auth'])->group(function () {
     // Courses
     Route::get('/course/{id}/take', [CourseController::class, 'take'])->name('course.take');
     Route::get('/course/{id}/complete', [CourseController::class, 'complete'])->name('course.complete');
+
+    Route::post('/dashboard/addcourse', [DashboardCourseController::class, 'storeCourse'])->name('courses.take');
 });
 
 //Menambah Route myprofile
@@ -70,8 +72,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/editprofile', [MyProfileController::class, 'edit'])->name('editprofile.edit');
     Route::put('/dashboard/editprofile', [MyProfileController::class, 'update'])->name('editprofile.update');
     Route::get('/dashboard/myprofile', [MyProfileController::class, 'index'])->name('index');
-
     Route::get('/dashboard/addcourse', [DashboardCourseController::class, 'addcourse'])->name('addcourse');
+    Route::post('/courses/take', [DashboardCourseController::class, 'takeCourse'])->name('courses.take');
+    Route::post('/dashboard/addcourse', [DashboardCourseController::class, 'takeCourse'])->name('courses.take');
 });
 
 // Route::get('/dashboard/courses/checkSlug',[DashboardCourseController::class, 'checkSlug'])
