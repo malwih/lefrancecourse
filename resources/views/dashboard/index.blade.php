@@ -6,7 +6,7 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
       <h1 class="text-3xl font-bold text-black mb-6">Dashboard</h1>
       <div class="flex items-center">
-        <a href="{{ route('dashboard') }}" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Add Course</a>
+        <a href="{{ route('addcourse') }}" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Add Course</a>
 
       </div>
     </div>
